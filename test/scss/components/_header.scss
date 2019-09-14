@@ -1,0 +1,94 @@
+// =============================
+// File Path: scss/components/_header.scss
+// Description: Header styles
+// Author: Dan Levy
+// Email: danlevy124@gmail.com
+// Created Date: 9/13/2019
+// =============================
+
+header {
+    height: 50px;
+    background-color: $header-footer-background-color;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 50px;
+    align-items: center;
+    transition: height .4s;
+}
+
+#header-hamburger-menu {
+    width: 25px;
+    height: 18px;
+    @include flex-container($justify-content: space-between, $align-items: null);
+    flex-direction: column;
+    margin-left: 20px;
+    // grid-area: hamburger-menu;
+
+    &-checkbox {
+        display: none;
+
+        &:checked {
+            display: none;
+        }
+    }
+
+    &-label {
+        width: 25px;
+        height: 2px;
+    }
+}
+
+.header-hamburger-menu-bar {
+    width: 25px;
+    height: 2px;
+    background-color: $primary-blue;
+    border-radius: 10px;
+}
+
+#header-name {
+    justify-self: center;
+    @include text(
+        $font-size: 1.25rem,
+        $font-weight: 400,
+        $color: $primary-blue,
+        $line-height: 1.4rem
+    );
+    // grid-area: header-name;
+}
+
+#header-nav {
+    // grid-area: header-nav;
+    justify-self: center;
+    text-align: center;
+    width: 100%;
+    display: none;
+    grid-column: 1 / 4;
+
+    &-item-current {
+        @include text(
+            $font-size: 1.56rem,
+            $font-weight: 400,
+            $color: $primary-red,
+            $line-height: 1.8rem
+        );
+    }
+}
+
+.header-nav-item {
+    text-align: center;
+    @include text(
+        $font-size: 1.56rem,
+        $font-weight: 300,
+        $color: $primary-black,
+        $line-height: 1.8rem
+    );
+    padding-top: 25px;
+
+    &:last-child {
+        padding-bottom: 25px;
+    }
+}
+
+#empty-div {
+    grid-area: empty-div;
+}
