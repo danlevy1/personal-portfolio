@@ -16,6 +16,11 @@
     position: relative;
     display: inline-block;
 
+    @include media-query($breakpoint: $tablet-breakpoint) {
+        font-size: 1.56rem;
+        line-height: 1.8rem;
+    }
+
     &::after {
         content: "";
         position: absolute;
@@ -39,6 +44,11 @@
             $line-height: 1.35rem
         );
 
+        @include media-query($breakpoint: $tablet-breakpoint) {
+            font-size: 1.25rem;
+            line-height: 1.5rem;
+        }
+
         &-two {
             padding-left: 40px;
             @include text(
@@ -47,10 +57,19 @@
                 $color: $primary-blue,
                 $line-height: 1.35rem
             );
+
+            @include media-query($breakpoint: $tablet-breakpoint) {
+                font-size: 1.25rem;
+                line-height: 1.5rem;
+            }
         }
     }
 
     &-img {
         height: 25px;
+
+        @include media-query($breakpoint: $tablet-breakpoint) {
+            height: 35px;
+        }
     }
 }

@@ -18,77 +18,96 @@
     <body>
         <!-- HEADER -->
         <header>
-            <!-- Hamburger Menu -->
-            <div id="header-hamburger-menu">
-                <div class="header-hamburger-menu-bar"></div>
-                <div class="header-hamburger-menu-bar"></div>
-                <div class="header-hamburger-menu-bar"></div>
-            </div>
-
             <!-- Name -->
             <h1 id="header-name">Dan Levy</h1>
             <!-- Empty Div (used to center name on mobile navigation) -->
-            <div id="header-empty-div"></div>
+
+            <!-- Hamburger Menu -->
+            <label for="header-hamburger-menu-checkbox">
+                <div id="header-hamburger-menu">
+                    <div class="header-hamburger-menu-bar"></div>
+                    <div class="header-hamburger-menu-bar"></div>
+                    <div class="header-hamburger-menu-bar"></div>
+                </div>
+            </label>
+            <input
+                type="checkbox"
+                name="header-hamburger-menu-checkbox"
+                id="header-hamburger-menu-checkbox"
+            />
 
             <!-- Header Navigation -->
             <nav id="header-nav">
-                <h2 id="header-nav-item-current" class="header-nav-item">About Me</h2>
-                <h2 class="header-nav-item">Projects</h2>
-                <h2 class="header-nav-item">Resume</h2>
+                <a id="header-nav-item-current" class="header-nav-item " href="#"
+                    >About Me</a
+                >
+                <a class="header-nav-item" href="projects.html">Projects</a>
+                <a class="header-nav-item" href="resume.html">Resume</a>
             </nav>
         </header>
 
         <main>
             <!-- Page Header -->
-            <section id="about-me-page-header">
-                <div id="about-me-page-header-info">
-                    <h3 id="about-me-page-header-info-small-text">Hi</h3>
-                    <h3 id="about-me-page-header-info-large-text">I'm Dan</h3>
-                    <h3 id="about-me-page-header-info-medium-text">
-                        Computer Science Student, Web Developer & iOS Developer
-                    </h3>
-                </div>
+            <section id="page-header">
+                <section id="page-header-about-me">
+                    <!-- Page Header Info -->
+                    <div id="page-header-about-me-info">
+                        <h3 id="page-header-about-me-info-small-text">Hi</h3>
+                        <h3 id="page-header-about-me-info-large-text">I'm Dan</h3>
+                        <h3 id="page-header-about-me-info-medium-text">
+                            Computer Science Student, Web Developer & iOS Developer
+                        </h3>
+                    </div>
 
-                <div id="about-me-page-header-buttons">
+                    <!-- Page Image -->
+                    <img
+                        id="page-header-about-me-img"
+                        src="img/about-me-img.svg"
+                        alt=""
+                    />
+                </section>
+
+                <section id="page-header-links">
                     <a
-                        id="about-me-page-header-github-button"
-                        class="about-me-page-header-button"
+                        id="page-header-link-github"
+                        class="page-header-link"
                         href="https://github.com/danlevy1"
                         target="_blank"
                     >
                         <img
-                            id="about-me-page-header-button-github-logo"
-                            class="about-me-page-header-button-logo"
+                            id="page-header-link-github-logo"
+                            class="page-header-link-logo"
                             src="img/github-logo.svg"
                             alt="GitHub Logo"
                         />
                         <h2
-                            id="about-me-page-header-button-github-text"
-                            class="about-me-page-header-button-text"
+                            id="page-header-link-github-text"
+                            class="page-header-link-text"
                         >
                             GitHub
                         </h2>
                     </a>
 
                     <a
-                        id="about-me-page-header-linkedin-button"
-                        class="about-me-page-header-button"
+                        id="page-header-link-linkedin"
+                        class="page-header-link"
                         href="https://www.linkedin.com/in/danlevy124/"
                         target="_blank"
                     >
                         <img
-                            class="about-me-page-header-button-logo"
+                            id="page-header-link-linkedin-logo"
+                            class="page-header-link-logo"
                             src="img/linkedin-logo.png"
                             alt="GitHub Logo"
                         />
                         <h2
-                            id="about-me-page-header-button-linkedin-text"
-                            class="about-me-page-header-button-text"
+                            id="page-header-link-linkedin-text"
+                            class="page-header-link-text"
                         >
                             LinkedIn
                         </h2>
                     </a>
-                </div>
+                </section>
             </section>
 
             <!-- About Me Section -->
@@ -219,15 +238,17 @@
                     </ul>
                 </section>
             </section>
-
-            <!-- Footer -->
-            <footer>
-                <span id="footer-website-copyright">© 2019 Dan Levy</span>
-                <a id="footer-contact-me-button" href="#">
-                    <span id="footer-contact-me-button-text">Contact Me</span>
-                </a>
-            </footer>
         </main>
+
+        <!-- Footer -->
+        <footer>
+            <span id="footer-website-copyright">© 2019 Dan Levy</span>
+            <div id="footer-contact-me-link-container">
+                <a id="footer-contact-me-link" href="#">
+                    <span id="footer-contact-me-link-text">Contact Me</span>
+                </a>
+            </div>
+        </footer>
         <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>

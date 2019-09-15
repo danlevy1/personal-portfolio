@@ -6,12 +6,21 @@
 // Created Date: 9/13/2019
 // =============================
 
-#about-me-page-header {
+#page-header-about-me {
     width: 280px;
+    @include flex-container($justify-content: center, $align-items: start);
     margin: 25px auto 0;
 
-    &-info {
+    @include media-query($breakpoint: $tablet-breakpoint) {
         width: 100%;
+        margin: 0;
+        padding: 50px 40px 0;
+        justify-content: space-between;
+        // flex-wrap: wrap;
+    }
+
+    &-info {
+        width: 290px;
         background-color: $primary-blue;
         padding: 20px;
         border-radius: 20px;
@@ -24,16 +33,26 @@
                 $color: $primary-white,
                 $line-height: 1.4rem
             );
+
+            @include media-query($breakpoint: $tablet-breakpoint) {
+                font-size: 1.25rem;
+                line-height: 1.5rem;
+            }
         }
 
         &-medium-text {
             @include text(
-                $font-size: 1.15rem,
+                $font-size: 1.1rem,
                 $font-weight: 400,
                 $color: $primary-white,
                 $line-height: 1.4rem
             );
             padding-top: 15px;
+
+            @include media-query($breakpoint: $tablet-breakpoint) {
+                font-size: 1.25rem;
+                line-height: 1.5rem;
+            }
         }
 
         &-large-text {
@@ -44,35 +63,34 @@
                 $line-height: 2.2rem
             );
             padding-top: 15px;
+
+            @include media-query($breakpoint: $tablet-breakpoint) {
+                font-size: 2.19rem;
+                line-height: 2.5rem;
+            }
         }
     }
 
-    &-buttons {
-        @include flex-container($justify-content: space-between, $align-items: center);
-        width: 280px;
-        margin-top: 25px;
-    }
-
-    &-button {
-        &-github-text {
-            color: $github-black;
+    &-img {
+        display: none;
+        @include media-query($breakpoint: $tablet-breakpoint) {
+            display: block;
+            height: 206px;
         }
-
-        &-linkedin-text {
-            color: $linkedin-blue;
-        }
-    }
-
-    &-github-button {
-        border-color: $github-black;
-    }
-
-    &-linkedin-button {
-        border-color: $linkedin-blue;
     }
 }
 
-.about-me-page-header-button {
+#page-header-links {
+    @include flex-container($justify-content: space-between, $align-items: center);
+    width: 290px;
+    margin: 40px auto 0;
+    
+    @include media-query($breakpoint: $tablet-breakpoint) {
+        margin: 40px 0 0 40px;
+    }
+}
+
+.page-header-link {
     @include flex-container($justify-content: center, $align-items: center);
     border: 2px solid;
     border-radius: 10px;
@@ -91,5 +109,23 @@
     &-logo {
         height: 70%;
         padding-right: 10px;
+    }
+}
+
+#page-header-link {
+    &-github-text {
+        color: $github-black;
+    }
+
+    &-linkedin-text {
+        color: $linkedin-blue;
+    }
+
+    &-github {
+        border-color: $github-black;
+    }
+
+    &-linkedin {
+        border-color: $linkedin-blue;
     }
 }

@@ -21,5 +21,11 @@
             $line-height: 1.25rem
         );
         padding-top: 10px;
+
+        &:first-of-type {
+            @include media-query($breakpoint: $tablet-breakpoint) {
+                padding-top: 20px;
+            }
+        }
     }
 }

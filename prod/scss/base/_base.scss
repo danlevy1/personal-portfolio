@@ -10,6 +10,13 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+main {
+    @include media-query($breakpoint: $tablet-breakpoint) {
+        max-width: 860px;
+        margin: auto;
+    }
+}
+
 .hide {
     display: none;
 }
