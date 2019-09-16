@@ -20,35 +20,27 @@
         <header>
             <!-- Name -->
             <h1 id="header-name">Dan Levy</h1>
-            <!-- Empty Div (used to center name on mobile navigation) -->
 
             <!-- Hamburger Menu -->
-            <label for="header-hamburger-menu-checkbox">
-                <div id="header-hamburger-menu">
-                    <div class="header-hamburger-menu-bar"></div>
-                    <div class="header-hamburger-menu-bar"></div>
-                    <div class="header-hamburger-menu-bar"></div>
-                </div>
-            </label>
-            <input
-                type="checkbox"
-                name="header-hamburger-menu-checkbox"
-                id="header-hamburger-menu-checkbox"
-            />
+            <div id="header-hamburger-menu">
+                <div class="header-hamburger-menu-bar"></div>
+                <div class="header-hamburger-menu-bar"></div>
+                <div class="header-hamburger-menu-bar"></div>
+            </div>
 
             <!-- Header Navigation -->
             <nav id="header-nav">
-                <a id="header-nav-item-current" class="header-nav-item " href="#"
+                <a id="header-nav-item-current" class="header-nav-item" href="#"
                     >About Me</a
                 >
                 <a class="header-nav-item" href="projects.html">Projects</a>
-                <a class="header-nav-item" href="resume.html">Resume</a>
+                <!-- <a class="header-nav-item" href="resume.html">Resume</a> -->
             </nav>
         </header>
 
         <main>
             <!-- Page Header -->
-            <section id="page-header">
+            <section>
                 <section id="page-header-about-me">
                     <!-- Page Header Info -->
                     <div id="page-header-about-me-info">
@@ -67,7 +59,9 @@
                     />
                 </section>
 
+                <!-- Page Header Links -->
                 <section id="page-header-links">
+                    <!-- GitHub Link -->
                     <a
                         id="page-header-link-github"
                         class="page-header-link"
@@ -88,6 +82,7 @@
                         </h2>
                     </a>
 
+                    <!-- LinkedIn Link -->
                     <a
                         id="page-header-link-linkedin"
                         class="page-header-link"
@@ -178,7 +173,6 @@
 
                 <!-- Undergrad Sub-Section -->
                 <section class="sub-section">
-                    <!-- Sub-Section Header -->
                     <div class="sub-section-header">
                         <h5 class="sub-section-header-text">Undergrad</h5>
                         <img
@@ -199,7 +193,6 @@
 
                 <!-- Web Development Sub-Section -->
                 <section class="sub-section">
-                    <!-- Sub-Section Header -->
                     <div class="sub-section-header">
                         <h5 class="sub-section-header-text">Web Development</h5>
                         <img
@@ -221,7 +214,6 @@
 
                 <!-- iOS Development Sub-Section -->
                 <section class="sub-section">
-                    <!-- Sub-Section Header -->
                     <div class="sub-section-header">
                         <h5 class="sub-section-header-text">iOS Development</h5>
                         <img
@@ -245,11 +237,12 @@
         <footer>
             <span id="footer-website-copyright">© 2019 Dan Levy</span>
             <div id="footer-contact-me-link-container">
-                <a id="footer-contact-me-link" href="#">
+                <!-- <a id="footer-contact-me-link" href="#">
                     <span id="footer-contact-me-link-text">Contact Me</span>
-                </a>
+                </a> -->
             </div>
         </footer>
-        <script type="text/javascript" src="js/index.js"></script>
+
+        <script type="text/javascript" src="js/mobile-nav.js"></script>
     </body>
 </html>

@@ -32,4 +32,16 @@
             padding-top: 30px;
         }
     }
+
+    &-no-indent-mobile {
+        padding-left: 0;
+    }
+
+    // &-img {
+    //     display: block;
+    //     width: 100%;
+    //     max-width: 400px;
+    //     margin: 20px auto 0;
+    //     box-shadow: $primary-box-shadow;
+    // }
 }

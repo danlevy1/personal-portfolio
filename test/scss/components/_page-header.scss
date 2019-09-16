@@ -19,8 +19,6 @@
         // flex-wrap: wrap;
     }
 
-    
-
     &-info {
         width: 290px;
         background-color: $primary-blue;
@@ -82,7 +80,7 @@
                 line-height: 2.5rem;
                 padding-top: 20px;
             }
-            
+
             @include media-query($breakpoint: $desktop-breakpoint) {
                 font-size: 2.5rem;
                 line-height: 2.9rem;
@@ -107,7 +105,7 @@
     @include flex-container($justify-content: space-between, $align-items: center);
     width: 290px;
     margin: 40px auto 0;
-    
+
     @include media-query($breakpoint: $tablet-breakpoint) {
         margin: 40px 0 0 40px;
     }
@@ -162,5 +160,30 @@
 
     &-linkedin {
         border-color: $linkedin-blue;
+    }
+}
+
+#page-header {
+    width: 90%;
+    max-width: 300px;
+    border: 5px solid $primary-blue;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 25px auto 0;
+    box-shadow: $primary-box-shadow;
+
+    &-heading {
+        @include text(
+            $font-size: 1.56rem,
+            $font-weight: 400,
+            $color: $primary-blue,
+            $line-height: 1.8rem
+        );
+        text-align: center;
+    }
+
+    &-img {
+        width: 90%;
+        padding-top: 20px;
     }
 }

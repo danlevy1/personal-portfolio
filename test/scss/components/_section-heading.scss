@@ -82,4 +82,12 @@
             height: 35px;
         }
     }
+
+    &-center-mobile-tablet {
+        text-align: center;
+
+        @include media-query($breakpoint: $desktop-breakpoint) {
+            text-align: left;
+        }
+    }
 }

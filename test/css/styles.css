@@ -410,12 +410,6 @@ header {
   justify-content: space-between;
   flex-direction: column;
 }
-#header-hamburger-menu-checkbox {
-  display: none;
-}
-#header-hamburger-menu-checkbox:checked + #header-nav {
-  height: 184px;
-}
 @media screen and (min-width: 768px) {
   #header-hamburger-menu {
     display: none;
@@ -460,7 +454,7 @@ header {
 }
 @media screen and (min-width: 768px) {
   #header-nav {
-    height: auto;
+    height: auto !important;
     width: auto;
     top: 50%;
     transform: translateY(-50%);
@@ -486,6 +480,10 @@ header {
   }
 }
 
+.header-nav-show {
+  height: 184px !important;
+}
+
 .header-nav-item {
   display: none;
   text-align: center;
@@ -503,6 +501,9 @@ header {
     line-height: 1.25rem;
   }
 }
+.header-nav-item-show {
+  display: initial;
+}
 .header-nav-item:last-child {
   padding-bottom: 25px;
 }
@@ -513,11 +514,6 @@ header {
   }
 }
 
-@media screen and (min-width: 768px) {
-  #header-hamburger-menu-checkbox:checked + #header-nav {
-    height: auto;
-  }
-}
 #page-header-about-me {
   width: 280px;
   display: flex;
@@ -673,6 +669,27 @@ header {
   border-color: #2867B2;
 }
 
+#page-header {
+  width: 90%;
+  max-width: 300px;
+  border: 5px solid #5477C9;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 25px auto 0;
+  box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.5);
+}
+#page-header-heading {
+  font-size: 1.56rem;
+  font-weight: 400;
+  color: #5477C9;
+  line-height: 1.8rem;
+  text-align: center;
+}
+#page-header-img {
+  width: 90%;
+  padding-top: 20px;
+}
+
 .section {
   padding: 60px 20px 0;
 }
@@ -702,6 +719,9 @@ header {
   .sub-section:first-of-type {
     padding-top: 30px;
   }
+}
+.sub-section-no-indent-mobile {
+  padding-left: 0;
 }
 
 .section-heading {
@@ -777,6 +797,14 @@ header {
 @media screen and (min-width: 768px) {
   .sub-section-header-img {
     height: 35px;
+  }
+}
+.sub-section-header-center-mobile-tablet {
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .sub-section-header-center-mobile-tablet {
+    text-align: left;
   }
 }
 
@@ -871,6 +899,130 @@ footer {
 @media screen and (min-width: 768px) {
   .education-list-item:first-of-type {
     padding-top: 20px;
+  }
+}
+
+.project {
+  padding-top: 35px;
+  margin: 0 auto;
+  max-width: 600px;
+}
+@media screen and (min-width: 768px) {
+  .project {
+    padding-top: 50px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .project {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding-top: 60px;
+    margin: 0 0 0 40px;
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+  }
+}
+.project:first-of-type {
+  padding-top: 25px;
+}
+@media screen and (min-width: 768px) {
+  .project:first-of-type {
+    padding-top: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .project:first-of-type {
+    padding-top: 40px;
+  }
+}
+.project-heading {
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .project-heading {
+    text-align: initial;
+  }
+}
+.project-img {
+  width: 100%;
+  margin-top: 15px;
+  box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.5);
+}
+@media screen and (min-width: 1024px) {
+  .project-img {
+    width: 600px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .project-features {
+    width: calc(100vw - 80px - 40px - 600px);
+    padding-left: 50px;
+  }
+}
+.project-features-heading {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #5477C9;
+  line-height: 1.35rem;
+  padding-top: 15px;
+}
+@media screen and (min-width: 768px) {
+  .project-features-heading {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #5477C9;
+    line-height: 1.45rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .project-features-heading {
+    font-size: 1.56rem;
+    font-weight: 300;
+    color: #5477C9;
+    line-height: 1.8rem;
+    padding-top: 0;
+  }
+}
+.project-features-list {
+  padding: 5px 0 0 17px;
+}
+@media screen and (min-width: 768px) {
+  .project-features-list {
+    padding-left: 18px;
+  }
+}
+.project-features-list li {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #2D2D2D;
+  line-height: 1.25rem;
+  padding-top: 5px;
+}
+.project-features-list li:first-child {
+  padding-top: 0;
+}
+@media screen and (min-width: 768px) {
+  .project-features-list li {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #2D2D2D;
+    line-height: 1.35rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .project-features-list li {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #2D2D2D;
+    line-height: 1.5rem;
+    padding-top: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .project-features-list {
+    padding-top: 12px;
   }
 }
 

@@ -1,0 +1,137 @@
+// =============================
+// File Path: scss/components/_project.scss
+// Description: Project section styles
+// Author: Dan Levy
+// Email: danlevy124@gmail.com
+// Created Date: 9/16/2019
+// =============================
+
+.project {
+    padding-top: 35px;
+    margin: 0 auto;
+    max-width: 600px;
+
+    @include media-query($breakpoint: $tablet-breakpoint) {
+        padding-top: 50px;
+    }
+
+    @include media-query($breakpoint: $desktop-breakpoint) {
+        @include flex-container($justify-content: center, $align-items: start);
+        padding-top: 60px;
+        margin: 0 0 0 40px;
+        width: 100%;
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    &:first-of-type {
+        padding-top: 25px;
+
+        @include media-query($breakpoint: $tablet-breakpoint) {
+            padding-top: 30px;
+        }
+
+        @include media-query($breakpoint: $tablet-breakpoint) {
+            padding-top: 40px;
+        }
+    }
+
+    &-heading {
+        text-align: center;
+
+        @include media-query($breakpoint: $desktop-breakpoint) {
+            text-align: initial;
+        }
+    }
+
+    &-img {
+        width: 100%;
+        margin-top: 15px;
+        box-shadow: $primary-box-shadow;
+
+        @include media-query($breakpoint: $desktop-breakpoint) {
+            width: 600px;
+        }
+    }
+
+    &-features {
+        @include media-query($breakpoint: $desktop-breakpoint) {
+            width: calc(100vw - 80px - 40px - 600px);
+            padding-left: 50px 
+        }
+
+        &-heading {
+            @include text(
+                $font-size: 1.1rem,
+                $font-weight: 300,
+                $color: $primary-blue,
+                $line-height: 1.35rem
+            );
+            padding-top: 15px;
+
+            @include media-query($tablet-breakpoint) {
+                @include text(
+                    $font-size: 1.2rem,
+                    $font-weight: 300,
+                    $color: $primary-blue,
+                    $line-height: 1.45rem
+                );
+            }
+
+            @include media-query($desktop-breakpoint) {
+                @include text(
+                    $font-size: 1.56rem,
+                    $font-weight: 300,
+                    $color: $primary-blue,
+                    $line-height: 1.8rem
+                );
+                padding-top: 0;
+            }
+        }
+
+        &-list {
+            padding: 5px 0 0 17px;
+
+            @include media-query($breakpoint: $tablet-breakpoint) {
+                padding-left: 18px;
+            }
+
+            li {
+                @include text(
+                    $font-size: 1rem,
+                    $font-weight: 300,
+                    $color: $primary-black,
+                    $line-height: 1.25rem
+                );
+                padding-top: 5px;
+
+                &:first-child {
+                    padding-top: 0;
+                }
+
+                @include media-query($breakpoint: $tablet-breakpoint) {
+                    @include text(
+                        $font-size: 1.1rem,
+                        $font-weight: 300,
+                        $color: $primary-black,
+                        $line-height: 1.35rem
+                    );
+                }
+
+                @include media-query($breakpoint: $desktop-breakpoint) {
+                    @include text(
+                        $font-size: 1.25rem,
+                        $font-weight: 300,
+                        $color: $primary-black,
+                        $line-height: 1.5rem
+                    );
+                    padding-top: 10px;
+                }
+            }
+
+            @include media-query($breakpoint: $tablet-breakpoint) {
+                padding-top: 12px;
+            }
+        }
+    }
+}

@@ -34,13 +34,13 @@ header {
     @include flex-container($justify-content: space-between, $align-items: null);
     flex-direction: column;
 
-    &-checkbox {
-        display: none;
+    // &-checkbox {
+    //     display: none;
 
-        &:checked + #header-nav {
-            height: 184px;
-        }
-    }
+    //     &:checked + #header-nav {
+    //         height: 184px;
+    //     }
+    // }
 
     @include media-query($breakpoint: $tablet-breakpoint) {
         display: none;
@@ -85,7 +85,7 @@ header {
     transition: height 0.4s;
 
     @include media-query($breakpoint: $tablet-breakpoint) {
-        height: auto;
+        height: auto !important;
         width: auto;
         top: 50%;
         transform: translateY(-50%);
@@ -113,6 +113,10 @@ header {
     }
 }
 
+.header-nav-show {
+    height: 184px !important;
+}
+
 .header-nav-item {
     display: none;
     text-align: center;
@@ -131,6 +135,10 @@ header {
         line-height: 1.25rem;
     }
 
+    &-show {
+        display: initial;
+    }
+
     &:last-child {
         padding-bottom: 25px;
 
@@ -141,8 +149,8 @@ header {
     }
 }
 
-@include media-query($breakpoint: $tablet-breakpoint) {
-    #header-hamburger-menu-checkbox:checked + #header-nav {
-        height: auto;
-    }
-}
+// @include media-query($breakpoint: $tablet-breakpoint) {
+//     #header-hamburger-menu-checkbox:checked + #header-nav {
+//         height: auto;
+//     }
+// }
