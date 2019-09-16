@@ -22,6 +22,11 @@
         );
         padding-top: 10px;
 
+        @include media-query($breakpoint: $desktop-breakpoint) {
+            font-size: 1.13rem;
+            line-height: 1.4rem;
+        }
+
         &:first-of-type {
             @include media-query($breakpoint: $tablet-breakpoint) {
                 padding-top: 20px;

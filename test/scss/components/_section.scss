@@ -21,6 +21,10 @@
         padding-top: 50px;
     }
 
+    @include media-query($breakpoint: $tablet-breakpoint) {
+        padding-left: 40px;
+    }
+
     &:first-of-type {
         padding-top: 20px;
 

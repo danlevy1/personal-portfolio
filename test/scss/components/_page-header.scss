@@ -19,12 +19,19 @@
         // flex-wrap: wrap;
     }
 
+    
+
     &-info {
         width: 290px;
         background-color: $primary-blue;
         padding: 20px;
         border-radius: 20px;
         box-shadow: $primary-box-shadow;
+
+        @include media-query($breakpoint: $desktop-breakpoint) {
+            width: 360px;
+            padding: 40px;
+        }
 
         &-small-text {
             @include text(
@@ -53,6 +60,12 @@
                 font-size: 1.25rem;
                 line-height: 1.5rem;
             }
+
+            @include media-query($breakpoint: $desktop-breakpoint) {
+                font-size: 1.56rem;
+                line-height: 1.9rem;
+                padding-top: 20px;
+            }
         }
 
         &-large-text {
@@ -67,6 +80,12 @@
             @include media-query($breakpoint: $tablet-breakpoint) {
                 font-size: 2.19rem;
                 line-height: 2.5rem;
+                padding-top: 20px;
+            }
+            
+            @include media-query($breakpoint: $desktop-breakpoint) {
+                font-size: 2.5rem;
+                line-height: 2.9rem;
             }
         }
     }
@@ -75,7 +94,11 @@
         display: none;
         @include media-query($breakpoint: $tablet-breakpoint) {
             display: block;
-            height: 206px;
+            height: 211px;
+        }
+
+        @include media-query($breakpoint: $desktop-breakpoint) {
+            height: 280px;
         }
     }
 }
@@ -88,14 +111,21 @@
     @include media-query($breakpoint: $tablet-breakpoint) {
         margin: 40px 0 0 40px;
     }
+
+    @include media-query($breakpoint: $desktop-breakpoint) {
+        width: 360px;
+    }
 }
 
 .page-header-link {
     @include flex-container($justify-content: center, $align-items: center);
     border: 2px solid;
     border-radius: 10px;
-    width: 130px;
-    height: 40px;
+    padding: 5px 10px;
+
+    @include media-query($breakpoint: $desktop-breakpoint) {
+        padding: 10px 20px;
+    }
 
     &-text {
         @include text(
@@ -104,6 +134,11 @@
             $color: null,
             $line-height: 1.4rem
         );
+
+        @include media-query($breakpoint: $desktop-breakpoint) {
+            font-size: 1.56rem;
+            line-height: 1.8rem;
+        }
     }
 
     &-logo {

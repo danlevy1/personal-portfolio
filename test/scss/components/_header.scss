@@ -16,6 +16,11 @@ header {
     @include media-query($breakpoint: $tablet-breakpoint) {
         height: 80px;
         justify-content: left;
+        padding: 0 40px;
+    }
+
+    @include media-query($breakpoint: $desktop-breakpoint) {
+        padding: 0 60px;
     }
 }
 
@@ -84,9 +89,13 @@ header {
         width: auto;
         top: 50%;
         transform: translateY(-50%);
-        right: 20px;
+        right: 40px;
         left: auto;
         flex-direction: row;
+    }
+
+    @include media-query($breakpoint: $desktop-breakpoint) {
+        right: 60px;
     }
 
     &-item-current {

@@ -21,6 +21,11 @@
         line-height: 1.8rem;
     }
 
+    @include media-query($breakpoint: $tablet-breakpoint) {
+        font-size: 1.89rem;
+        line-height: 2.3rem;
+    }
+
     &::after {
         content: "";
         position: absolute;
@@ -47,6 +52,11 @@
         @include media-query($breakpoint: $tablet-breakpoint) {
             font-size: 1.25rem;
             line-height: 1.5rem;
+        }
+
+        @include media-query($breakpoint: $desktop-breakpoint) {
+            font-size: 1.56rem;
+            line-height: 1.8rem;
         }
 
         &-two {
