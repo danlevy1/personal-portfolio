@@ -17,6 +17,11 @@
     padding-top: 10px;
     text-align: justify;
 
+    @include media-query($breakpoint: $desktop-breakpoint) {
+        font-size: 1.13rem;
+        line-height: 1.4rem;
+    }
+
     &:first-of-type {
         padding-top: 15px;
     }

@@ -114,7 +114,7 @@ header {
 }
 
 .header-nav-show {
-    height: 184px !important;
+    height: 131px !important;
 }
 
 .header-nav-item {
@@ -126,11 +126,11 @@ header {
         $color: $primary-black,
         $line-height: 1.8rem
     );
-    padding-top: 25px;
+    margin-top: 25px;
 
     @include media-query($breakpoint: $tablet-breakpoint) {
         display: block;
-        padding: 0 50px 0 0;
+        margin: 0 50px 0 0;
         font-size: 1rem;
         line-height: 1.25rem;
     }
@@ -140,11 +140,8 @@ header {
     }
 
     &:last-child {
-        padding-bottom: 25px;
-
         @include media-query($breakpoint: $tablet-breakpoint) {
-            display: block;
-            padding: 0;
+            margin: 0;
         }
     }
 }

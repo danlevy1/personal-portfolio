@@ -16,6 +16,11 @@ header {
     @include media-query($breakpoint: $tablet-breakpoint) {
         height: 80px;
         justify-content: left;
+        padding: 0 40px;
+    }
+
+    @include media-query($breakpoint: $desktop-breakpoint) {
+        padding: 0 60px;
     }
 }
 
@@ -29,13 +34,13 @@ header {
     @include flex-container($justify-content: space-between, $align-items: null);
     flex-direction: column;
 
-    &-checkbox {
-        display: none;
+    // &-checkbox {
+    //     display: none;
 
-        &:checked + #header-nav {
-            height: 184px;
-        }
-    }
+    //     &:checked + #header-nav {
+    //         height: 184px;
+    //     }
+    // }
 
     @include media-query($breakpoint: $tablet-breakpoint) {
         display: none;
@@ -80,13 +85,17 @@ header {
     transition: height 0.4s;
 
     @include media-query($breakpoint: $tablet-breakpoint) {
-        height: auto;
+        height: auto !important;
         width: auto;
         top: 50%;
         transform: translateY(-50%);
-        right: 20px;
+        right: 40px;
         left: auto;
         flex-direction: row;
+    }
+
+    @include media-query($breakpoint: $desktop-breakpoint) {
+        right: 60px;
     }
 
     &-item-current {
@@ -104,6 +113,10 @@ header {
     }
 }
 
+.header-nav-show {
+    height: 131px !important;
+}
+
 .header-nav-item {
     display: none;
     text-align: center;
@@ -113,27 +126,28 @@ header {
         $color: $primary-black,
         $line-height: 1.8rem
     );
-    padding-top: 25px;
+    margin-top: 25px;
 
     @include media-query($breakpoint: $tablet-breakpoint) {
         display: block;
-        padding: 0 50px 0 0;
+        margin: 0 50px 0 0;
         font-size: 1rem;
         line-height: 1.25rem;
     }
 
-    &:last-child {
-        padding-bottom: 25px;
+    &-show {
+        display: initial;
+    }
 
+    &:last-child {
         @include media-query($breakpoint: $tablet-breakpoint) {
-            display: block;
-            padding: 0;
+            margin: 0;
         }
     }
 }
 
-@include media-query($breakpoint: $tablet-breakpoint) {
-    #header-hamburger-menu-checkbox:checked + #header-nav {
-        height: auto;
-    }
-}
+// @include media-query($breakpoint: $tablet-breakpoint) {
+//     #header-hamburger-menu-checkbox:checked + #header-nav {
+//         height: auto;
+//     }
+// }
