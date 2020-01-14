@@ -6,7 +6,7 @@
 // Created Date: 9/13/2019
 // =============================
 
-.paragraph {
+.about-me-paragraph {
     @include text(
         $font-size: 1rem,
         $font-weight: 300,
@@ -16,10 +16,15 @@
     text-indent: 2rem;
     padding-top: 10px;
     text-align: justify;
+    margin: 0 20px;
+
+    @include media-query($breakpoint: $tablet-breakpoint) {
+        margin: 0 40px;
+    }
 
     @include media-query($breakpoint: $desktop-breakpoint) {
         font-size: 1.13rem;
-        line-height: 1.4rem;
+        margin: 0 60px;
     }
 
     &:first-of-type {

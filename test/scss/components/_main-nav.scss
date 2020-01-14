@@ -1,0 +1,89 @@
+// =============================
+// File Path: scss/components/_header.scss
+// Description: Header styles
+// Author: Dan Levy
+// Email: danlevy124@gmail.com
+// Created Date: 1/12/2020
+// =============================
+
+#main-nav {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $primary-white;
+    width: 100%;
+    @include flex-container($justify-content: null, $align-items: center);
+    flex-direction: column;
+    height: 0;
+    transition: height 0.4s;
+
+    @include media-query($breakpoint: $tablet-breakpoint) {
+        height: 100%;
+        width: 75%;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        left: auto;
+        flex-direction: row;
+        background-color: $primary-blue;
+        border-bottom-left-radius: 100px;
+    }
+
+    &-nav-item-current {
+        background-color: $primary-red;
+        border-radius: 10px;
+
+        @include media-query($breakpoint: $tablet-breakpoint) {
+            font-size: 1rem;
+            background-color: $primary-white;
+        }
+
+        &-link {
+            color: $primary-white;
+
+            @include media-query($breakpoint: $tablet-breakpoint) {
+                color: $primary-black;
+            }
+        }
+    }
+}
+
+.main-nav-nav-item {
+    display: none;
+    text-align: center;
+    width: 175px;
+    padding: 10px 0;
+    margin: 10px auto 0;
+
+    @include media-query($breakpoint: $tablet-breakpoint) {
+        display: block;
+        width: 75px;
+        margin: 0 20px 0 0;
+        padding: 8px 0;
+        font-size: 1rem;
+        line-height: null;
+
+        &:first-child {
+            margin-left: auto;
+        }
+    }
+
+    &-show {
+        display: initial;
+    }
+
+    &-link {
+        @include text(
+            $font-size: 1.56rem,
+            $font-weight: 400,
+            $color: $primary-black,
+            $line-height: null
+        );
+
+        @include media-query($breakpoint: $tablet-breakpoint) {
+            font-size: 1rem;
+            color: $primary-white;
+        }
+    }
+}

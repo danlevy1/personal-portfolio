@@ -6,14 +6,14 @@
 // Created Date: 9/13/2019
 // =============================
 
-@import 'header';
-@import 'page-header';
+@import 'nav-bar';
+@import 'main-nav';
+@import 'home-page-header';
+@import 'projects-page-header';
 @import 'section';
 @import 'section-heading';
-@import 'paragraph';
-@import 'button';
-@import 'project-card';
+@import 'about-me-paragraph';
+@import 'project-cards';
 @import 'footer';
-@import 'image';
-@import 'list';
-@import 'project';
+@import 'education-cards';
+@import 'skills';

@@ -1,0 +1,63 @@
+// =============================
+// File Path: scss/components/_education-card.scss
+// Description: Education card styles
+// Author: Dan Levy
+// Email: danlevy124@gmail.com
+// Created Date: 1/12/2020
+// =============================
+
+#education-cards {
+    @include flex-container($justify-content: center, $align-items: start);
+    flex-wrap: wrap;
+
+    @include media-query($breakpoint: $card-horizontal-split-breakpoint) {
+        justify-content: space-between;
+    }
+}
+
+.education-card {
+    @include flex-container($justify-content: center, $align-items: null);
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: $primary-box-shadow;
+    margin: 20px 20px;
+    padding: 10px;
+    width: 280px;
+
+    @include media-query($breakpoint: $tablet-breakpoint) {
+        margin: 30px 40px;
+    }
+
+    @include media-query($breakpoint: $tablet-breakpoint) {
+        margin: 30px 60px;
+    }
+
+    &-img {
+        display: block;
+        height: 45px; 
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    &-text {
+        @include text(
+            $font-size: 1rem,
+            $font-weight: 400,
+            $color: $primary-black,
+            $line-height: 1.25
+        );
+        margin: 5px 0 5px 10px;
+    }
+}
+
+#fl-tech-education-card {
+    border: 3px solid $fl-tech-red;
+}
+
+#treehouse-education-card {
+    border: 3px solid $treehouse-green;
+}
+
+#udemy-education-card {
+    border: 3px solid $udemy-red;
+}

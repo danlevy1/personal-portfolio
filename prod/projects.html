@@ -16,206 +16,208 @@
         <link rel="stylesheet" href="css/styles.css" />
     </head>
     <body>
-        <!-- HEADER -->
-        <header>
-            <!-- Name -->
-            <h1 id="header-name">Dan Levy</h1>
+        <!-- NAV BAR -->
+        <header id="nav-bar">
+            <!-- Title -->
+            <h1 id="nav-bar-title">Dan Levy</h1>
 
             <!-- Hamburger Menu -->
-            <div id="header-hamburger-menu">
-                <div class="header-hamburger-menu-bar"></div>
-                <div class="header-hamburger-menu-bar"></div>
-                <div class="header-hamburger-menu-bar"></div>
+            <div id="nav-bar-hamburger-menu">
+                <div class="nav-bar-hamburger-menu-bar"></div>
+                <div class="nav-bar-hamburger-menu-bar"></div>
+                <div class="nav-bar-hamburger-menu-bar"></div>
             </div>
 
             <!-- Header Navigation -->
-            <nav id="header-nav">
-                <a class="header-nav-item" href="index.html">About Me</a>
-                <a id="header-nav-item-current" class="header-nav-item" href="#"
-                    >Projects</a
-                >
-                <!-- <a class="header-nav-item" href="resume.html">Resume</a> -->
+            <nav id="main-nav">
+                <div class="main-nav-nav-item">
+                    <a class="main-nav-nav-item-link" href="index.html">Home</a>
+                </div>
+                <div id="main-nav-nav-item-current" class="main-nav-nav-item">
+                    <a
+                        id="main-nav-nav-item-current-link"
+                        class="main-nav-nav-item-link"
+                        href="projects.html"
+                        >Projects</a
+                    >
+                </div>
+                <div class="main-nav-nav-item">
+                    <a
+                        class="main-nav-nav-item-link"
+                        href="files/dan-levy-resume.pdf"
+                        target="_blank"
+                        >Resume</a
+                    >
+                </div>
             </nav>
         </header>
+
         <main>
             <!-- Page Header -->
-            <section id="page-header">
-                <h3 id="page-header-heading">My Projects</h3>
+            <section id="projects-page-header-card">
                 <img
-                    id="page-header-img"
+                    id="projects-page-header-card-img"
                     src="img/projects-header-img.png"
-                    alt="Projects Header Image"
+                    alt="Header Image"
                 />
+                <h3 id="projects-page-header-card-large-text">Projects</h3>
+                <h3 id="projects-page-header-card-medium-text">
+                    Web Development and School Projects
+                </h3>
             </section>
 
-            <!-- Websites -->
+            <!-- Web Development -->
             <section class="section">
-                <h4 class="section-heading">Websites</h4>
-
-                <!-- Sample Personal Portfolio -->
-                <section class="project">
-                    <div class="project-header">
-                        <h5 class="sub-section-header-text project-heading">
-                            Sample Personal Portfolio
+                <h3 class="section-heading">Web Development</h3>
+                <div id="project-cards">
+                    <!-- The Music Assistant -->
+                    <div class="project-card project-card-web-dev">
+                        <h4 class="project-card-heading project-card-heading-web-dev">
+                            The Music Assistant
+                        </h4>
+                        <div class="project-card-buttons">
+                            <a
+                                class="project-card-button project-card-button-web-dev"
+                                href="https://github.com/dgriessler/The-Music-Assistant"
+                                target="_blank"
+                                >Repo</a
+                            >
+                            <a
+                                class="project-card-button project-card-button-web-dev"
+                                href="https://music-assistant-fit.web.app"
+                                target="_blank"
+                                >Website</a
+                            >
+                        </div>
+                        <img
+                            class="project-card-img"
+                            src="img/the-music-assistant-screenshot.png"
+                            alt="The Music Assistant Screenshot"
+                        />
+                        <h5 class="project-card-sub-heading project-card-sub-heading-web-dev">
+                            Description
                         </h5>
-
-                        <a
-                            href="https://danlevy1.github.io/Treehouse_FEWD_Project_2"
-                            target="_blank"
-                            ><img
-                                class="project-img"
-                                src="img/sample-personal-portfolio.png"
-                                alt="Sample Personal Portfolio"
-                        /></a>
-                    </div>
-
-                    <div class="project-features">
-                        <h6 class="project-features-heading">Features</h6>
-
-                        <ol class="project-features-list">
-                            <li>First full webpage I ever built</li>
-                            <li>Layout built with mobile-first design</li>
-                            <li>Uses floats to create a “grid”</li>
-                            <li>
-                                Main navigation links use HTML ids to scroll to the
-                                correct section
-                            </li>
-                        </ol>
-                    </div>
-                </section>
-
-                <!-- Web Style Guide -->
-                <section class="project">
-                    <div class="project-header">
-                        <h5 class="sub-section-header-text project-heading">
-                            Web Style Guide
+                        <p class="project-card-paragraph project-card-paragraph-web-dev">
+                            This is my senior project! It won’t be completed until April 2020, but
+                            feel free to check out our progress. The goal of this project is to help
+                            students learn sheet music and improve their singing ability. I am the
+                            designer and web developer on the project. Read more
+                            <a
+                                class="project-card-link project-card-link-web-dev"
+                                href="https://dgriessler.github.io/The-Music-Assistant/"
+                                target="_blank"
+                                >here</a
+                            >!
+                        </p>
+                        <h5 class="project-card-sub-heading project-card-sub-heading-web-dev">
+                            Skills
                         </h5>
-
-                        <a
-                            href="https://danlevy1.github.io/Treehouse_FEWD_Project_4"
-                            target="_blank"
-                            ><img
-                                class="project-img"
-                                src="img/web-style-guide.png"
-                                alt="Web Style Guide"
-                        /></a>
+                        <div class="project-card-pills">
+                            <h6 class="project-card-pill project-card-pill-web-dev">React</h6>
+                            <h6 class="project-card-pill project-card-pill-web-dev">Redux</h6>
+                            <h6 class="project-card-pill project-card-pill-web-dev">SCSS</h6>
+                            <h6 class="project-card-pill project-card-pill-web-dev">JavaScript</h6>
+                            <h6 class="project-card-pill project-card-pill-web-dev">Firebase</h6>
+                            <h6 class="project-card-pill project-card-pill-other">SQL</h6>
+                            <h6 class="project-card-pill project-card-pill-other">AWS RDS</h6>
+                        </div>
                     </div>
 
-                    <div class="project-features">
-                        <h6 class="project-features-heading">Features</h6>
-
-                        <ol class="project-features-list">
-                            <li>Styles built using SCSS</li>
-                            <li>Reusable components</li>
-                            <li>Flexible layout using CSS Flexbox</li>
-                        </ol>
-                    </div>
-                </section>
-
-                <!-- Interactive Photo Gallery -->
-                <section class="project">
-                    <div class="project-header">
-                        <h5 class="sub-section-header-text project-heading">
-                            Interactive Photo Gallery
-                        </h5>
-
-                        <a
-                            href="https://danlevy1.github.io/Treehouse_FEWD_Project_5"
-                            target="_blank"
-                            ><img
-                                class="project-img"
-                                src="img/interactive-photo-gallary.png"
-                                alt="Interactive Photo Gallery"
-                        /></a>
-                    </div>
-
-                    <div class="project-features">
-                        <h6 class="project-features-heading">Features</h6>
-
-                        <ol class="project-features-list">
-                            <li>Uses Lightcase.js to show larger images</li>
-                            <li>Search functionality using JavaScript</li>
-                            <li>Flexible layout using CSS Flexbox</li>
-                        </ol>
-                    </div>
-                </section>
-
-                <!-- Web App Dashboard -->
-                <section class="project">
-                    <div class="project-header">
-                        <h5 class="sub-section-header-text project-heading">
+                    <!-- Web App Dashboard -->
+                    <div class="project-card project-card-web-dev">
+                        <h4 class="project-card-heading project-card-heading-web-dev">
                             Web App Dashboard
+                        </h4>
+                        <div class="project-card-buttons">
+                            <a
+                                class="project-card-button project-card-button-web-dev"
+                                href="https://github.com/danlevy1/Treehouse_FEWD_Project_7"
+                                target="_blank"
+                                >Repo</a
+                            >
+                            <a
+                                class="project-card-button project-card-button-web-dev"
+                                href="https://danlevy1.github.io/Treehouse_FEWD_Project_7/"
+                                target="_blank"
+                                >Website</a
+                            >
+                        </div>
+                        <img
+                            class="project-card-img"
+                            src="img/web-app-dashboard-screenshot.png"
+                            alt="Web App Dashboard Screenshot"
+                        />
+                        <h5 class="project-card-sub-heading project-card-sub-heading-web-dev">
+                            Description
                         </h5>
-
-                        <a
-                            href="https://danlevy1.github.io/Treehouse_FEWD_Project_7"
-                            target="_blank"
-                            ><img
-                                class="project-img"
-                                src="img/web-app-dashboard.png"
-                                alt="Web App Dashboard"
-                        /></a>
-                    </div>
-
-                    <div class="project-features">
-                        <h6 class="project-features-heading">Features</h6>
-
-                        <ol class="project-features-list">
-                            <li>Built using CSS Flexbox and CSS Grid</li>
-                            <li>Charts build using Chart.js</li>
-                            <li>
-                                JavaScript used to display notifications and search users
-                            </li>
-                            <li>Local storage used to save settings</li>
-                            <li>
-                                Custom on-off switch built using CSS transforms and
-                                JavaScript
-                            </li>
-                        </ol>
-                    </div>
-                </section>
-
-                <!-- Employee Directory -->
-                <section class="project">
-                    <div class="project-header">
-                        <h5 class="sub-section-header-text project-heading">
-                            Employee Directory
+                        <p class="project-card-paragraph project-card-paragraph-web-dev">
+                            This webpage uses the latest layout formats including CSS Flexbox and
+                            Grid. The charts are created with Chart.js. JavaScript is used to
+                            display notifications and to search for users. This webpage also uses
+                            local storage to save settings. At the bottom of the page, I created
+                            custom on-off switches using CSS transforms and JavaScript.
+                        </p>
+                        <h5 class="project-card-sub-heading project-card-sub-heading-web-dev">
+                            Skills
                         </h5>
-
-                        <a
-                            href="https://danlevy1.github.io/Treehouse_FEWD_Project_8"
-                            target="_blank"
-                            ><img
-                                class="project-img"
-                                src="img/employee-directory.png"
-                                alt="Employee Directory"
-                        /></a>
+                        <div class="project-card-pills">
+                            <h6 class="project-card-pill project-card-pill-web-dev">HTML</h6>
+                            <h6 class="project-card-pill project-card-pill-web-dev">SCSS</h6>
+                            <h6 class="project-card-pill project-card-pill-web-dev">JavaScript</h6>
+                            <h6 class="project-card-pill project-card-pill-web-dev">Chart.js</h6>
+                        </div>
                     </div>
 
-                    <div class="project-features">
-                        <h6 class="project-features-heading">Features</h6>
-
-                        <ol class="project-features-list">
-                            <li>
-                                Uses Fetch API and The Random User Generator API to
-                                generate random employees
-                            </li>
-                            <li>Custom modal view built using CSS and JavaScript</li>
-                            <li>Built using CSS Grid</li>
-                            <li>Search functionality</li>
-                        </ol>
+                    <!-- Web Style Guide -->
+                    <div class="project-card project-card-web-dev">
+                        <h4 class="project-card-heading project-card-heading-web-dev">
+                            Web Style Guide
+                        </h4>
+                        <div class="project-card-buttons">
+                            <a
+                                class="project-card-button project-card-button-web-dev"
+                                href="https://github.com/danlevy1/Treehouse_FEWD_Project_4"
+                                target="_blank"
+                                >Repo</a
+                            >
+                            <a
+                                class="project-card-button project-card-button-web-dev"
+                                href="https://danlevy1.github.io/Treehouse_FEWD_Project_4/"
+                                target="_blank"
+                                >Website</a
+                            >
+                        </div>
+                        <img
+                            class="project-card-img"
+                            src="img/web-style-guide-screenshot.png"
+                            alt="Web Style Guide Screenshot"
+                        />
+                        <h5 class="project-card-sub-heading project-card-sub-heading-web-dev">
+                            Description
+                        </h5>
+                        <p class="project-card-paragraph project-card-paragraph-web-dev">
+                            Styles were created using SCSS. As the name suggests, the components are
+                            reusable. The page also has a flexible layout created using CSS Flexbox.
+                        </p>
+                        <h5 class="project-card-sub-heading project-card-sub-heading-web-dev">
+                            Skills
+                        </h5>
+                        <div class="project-card-pills">
+                            <h6 class="project-card-pill project-card-pill-web-dev">HTML</h6>
+                            <h6 class="project-card-pill project-card-pill-web-dev">SCSS</h6>
+                        </div>
                     </div>
-                </section>
+                </div>
             </section>
         </main>
 
         <!-- Footer -->
         <footer>
             <span id="footer-website-copyright">© 2019 Dan Levy</span>
-            <div id="footer-contact-me-link-container">
-                <!-- <a id="footer-contact-me-link" href="#">
-                    <span id="footer-contact-me-link-text">Contact Me</span>
-                </a> -->
+            <div id="footer-contact-me-button">
+                <a id="footer-contact-me-button-link" href="mailto:danlevy124@gmail.com">
+                    <span id="footer-contact-me-button-link-text">Contact Me</span>
+                </a>
             </div>
         </footer>
 

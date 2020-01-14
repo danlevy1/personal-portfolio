@@ -10,13 +10,19 @@
 // COLOR VARIABLES
 // -----------------------------
 $primary-blue: #5477C9;
+$primary-orange: #DA6500;
 $primary-red: #EE5252;
-$primary-green: #33CF66;
+$primary-pink: #D40069;
+$primary-green: #33B121;
 $primary-black: #2D2D2D;
-$primary-white: #fff;
-$header-footer-background-color: #FAFAFA;
+$primary-white: #FFFFFF;
+$primary-gray: #FDFDFD;
+$secondary-gray: #ECECEC;
 $github-black: #0F0C0D;
 $linkedin-blue: #2867B2;
+$fl-tech-red: #761013;
+$treehouse-green: #5FCF80;
+$udemy-red: #E15F53;
 
 
 // -----------------------------
@@ -28,5 +34,6 @@ $primary-box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, .5);
 // -----------------------------
 // BREAKPOINT VARIABLES
 // -----------------------------
+$card-horizontal-split-breakpoint: 640px;
 $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1024px;

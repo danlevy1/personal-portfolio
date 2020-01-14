@@ -1,41 +1,46 @@
 // =============================
-// File Path: scss/components/_page-header.scss
+// File Path: scss/components/_home-page-header.scss
 // Description: Page header styles
 // Author: Dan Levy
 // Email: danlevy124@gmail.com
 // Created Date: 9/13/2019
 // =============================
 
-#page-header-about-me {
+#home-page-header {
+    @include flex-container($justify-content: null, $align-items: space-between);
+    flex-direction: column;
     width: 280px;
-    @include flex-container($justify-content: center, $align-items: start);
     margin: 25px auto 0;
 
     @include media-query($breakpoint: $tablet-breakpoint) {
-        width: 100%;
-        margin: 0;
-        padding: 50px 40px 0;
+        flex-direction: row;
         justify-content: space-between;
-        // flex-wrap: wrap;
+        margin: 25px 40px 0;
+        width: auto;
     }
 
-    &-info {
-        width: 290px;
-        background-color: $primary-blue;
-        padding: 20px;
+    &-card {
+        background-color: $primary-white;
+        border: 3px solid $primary-black;
         border-radius: 20px;
+        padding: 20px;
         box-shadow: $primary-box-shadow;
 
-        @include media-query($breakpoint: $desktop-breakpoint) {
-            width: 360px;
-            padding: 40px;
+        @include media-query($breakpoint: $tablet-breakpoint) {
+            width: 325px;
+            padding: 30px;
+            justify-content: space-between;
+        }
+
+        &-top {
+            @include flex-container($justify-content: space-between, $align-items: null);
         }
 
         &-small-text {
             @include text(
                 $font-size: 1.1rem,
                 $font-weight: 300,
-                $color: $primary-white,
+                $color: $primary-black,
                 $line-height: 1.4rem
             );
 
@@ -49,7 +54,7 @@
             @include text(
                 $font-size: 1.1rem,
                 $font-weight: 400,
-                $color: $primary-white,
+                $color: $primary-black,
                 $line-height: 1.4rem
             );
             padding-top: 15px;
@@ -70,7 +75,7 @@
             @include text(
                 $font-size: 1.8rem,
                 $font-weight: 400,
-                $color: $primary-white,
+                $color: $primary-black,
                 $line-height: 2.2rem
             );
             padding-top: 15px;
@@ -86,104 +91,76 @@
                 line-height: 2.9rem;
             }
         }
-    }
 
-    &-img {
-        display: none;
-        @include media-query($breakpoint: $tablet-breakpoint) {
+        &-img {
             display: block;
-            height: 211px;
+            height: 80px;
         }
+    }
 
-        @include media-query($breakpoint: $desktop-breakpoint) {
-            height: 280px;
+    &-links {
+        @include flex-container($justify-content: space-between, $align-items: center);
+        margin-top: 20px;
+
+        @include media-query($breakpoint: $tablet-breakpoint) {
+            flex-direction: column;
+            margin: 0;
         }
     }
 }
 
-#page-header-links {
-    @include flex-container($justify-content: space-between, $align-items: center);
-    width: 290px;
-    margin: 40px auto 0;
-
-    @include media-query($breakpoint: $tablet-breakpoint) {
-        margin: 40px 0 0 40px;
-    }
-
-    @include media-query($breakpoint: $desktop-breakpoint) {
-        width: 360px;
-    }
-}
-
-.page-header-link {
+.home-page-header-link {
     @include flex-container($justify-content: center, $align-items: center);
-    border: 2px solid;
-    border-radius: 10px;
-    padding: 5px 10px;
+    width: 130px;
+    height: 45px;
+    border-radius: 20px;
+    box-shadow: $primary-box-shadow;
 
     @include media-query($breakpoint: $desktop-breakpoint) {
         padding: 10px 20px;
     }
 
     &-text {
-        @include text(
-            $font-size: 1.2rem,
-            $font-weight: 300,
-            $color: null,
-            $line-height: 1.4rem
-        );
+        @include text($font-size: 1.2rem, $font-weight: 300, $color: null, $line-height: null);
 
         @include media-query($breakpoint: $desktop-breakpoint) {
-            font-size: 1.56rem;
-            line-height: 1.8rem;
+            font-size: 1rem;
         }
     }
 
     &-logo {
-        height: 70%;
+        height: 25px;
         padding-right: 10px;
     }
 }
 
-#page-header-link {
-    &-github-text {
-        color: $github-black;
-    }
-
-    &-linkedin-text {
-        color: $linkedin-blue;
-    }
-
+#home-page-header-link {
     &-github {
-        border-color: $github-black;
+        background-color: $github-black;
+
+        &-text {
+            color: $primary-white;
+        }
     }
 
     &-linkedin {
-        border-color: $linkedin-blue;
-    }
-}
+        background-color: $linkedin-blue;
 
-#page-header {
-    width: 90%;
-    max-width: 300px;
-    border: 5px solid $primary-blue;
-    border-radius: 20px;
-    padding: 20px;
-    margin: 25px auto 0;
-    box-shadow: $primary-box-shadow;
-
-    &-heading {
-        @include text(
-            $font-size: 1.56rem,
-            $font-weight: 400,
-            $color: $primary-blue,
-            $line-height: 1.8rem
-        );
-        text-align: center;
+        &-text {
+            color: $primary-white;
+        }
     }
 
-    &-img {
-        width: 90%;
-        padding-top: 20px;
+    &-email {
+        display: none;
+        background-color: $primary-red;
+
+        @include media-query($breakpoint: $tablet-breakpoint) {
+            @include flex-container($justify-content: center, $align-items: center)
+        }
+
+        &-text {
+            color: $primary-white;
+        }
     }
 }
