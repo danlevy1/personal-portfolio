@@ -1,10 +1,8 @@
-/* =============================
- * File Path: js//index.js
- * Description: Scripts
- * Author: Dan Levy
- * Email: danlevy124@gmail.com
- * Created Date: 9/13/2019
-============================= */
+/**
+ * Handles showing/hiding the mobile navigation
+ * @author Dan Levy <danlevy124@gmail.com>
+ * @module
+ */
 
 /**
  * Initial function when page loads
@@ -18,7 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
  * Shows or hides the mobile navigation when the hamburger menu is clicked
  */
 function showHideMobileNav() {
-    const headerHamburgerMenu = document.querySelector("#nav-bar-hamburger-menu");
+    const headerHamburgerMenu = document.querySelector(
+        "#nav-bar-hamburger-menu"
+    );
     const headerNav = document.querySelector("#main-nav");
     console.log(headerNav);
     const headerNavLinks = headerNav.children;
@@ -42,15 +42,15 @@ function onResize() {
     const headerNav = document.querySelector("#main-nav");
     let isMobile = window.innerWidth < 768 ? true : false;
 
-    window.addEventListener('resize', () => {
+    window.addEventListener("resize", () => {
         if (isMobile && window.innerWidth >= 768) {
             headerNav.classList.remove("nav-bar-nav-show");
-            Array.from(headerNav.children).forEach(link => {
+            Array.from(headerNav.children).forEach((link) => {
                 link.classList.remove("main-nav-nav-item-show");
             });
             isMobile = false;
         }
-    })
+    });
 }
 
 /**
@@ -58,7 +58,7 @@ function onResize() {
  * @param {*} links Mobile navigation links
  */
 function showHideMobileNavLinks(links) {
-    Array.from(links).forEach(link => {
+    Array.from(links).forEach((link) => {
         link.classList.toggle("main-nav-nav-item-show");
     });
 }
