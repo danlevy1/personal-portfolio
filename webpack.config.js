@@ -17,4 +17,26 @@ module.exports = {
         port: 3000,
     },
     devtool: "cheap-module-eval-source-map",
+    module: {
+        rules: [
+            {
+                test: /\.m?js$/,
+                exclude: /(node_modules)/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: [
+                            [
+                                "@babel/preset-env",
+                                {
+                                    useBuiltIns: "usage",
+                                    corejs: { version: 3 },
+                                },
+                            ],
+                        ],
+                    },
+                },
+            },
+        ],
+    },
 };

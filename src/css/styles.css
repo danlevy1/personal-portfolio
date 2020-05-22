@@ -196,9 +196,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
 }
 
@@ -206,9 +206,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -217,9 +217,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -269,8 +269,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type=checkbox],
-[type=radio] {
+[type="checkbox"],
+[type="radio"] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -280,8 +280,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -289,7 +289,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type=search] {
+[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -299,7 +299,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type=search]::-webkit-search-decoration {
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -348,7 +348,7 @@ template {
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #FDFDFD;
+  background-color: #fdfdfd;
 }
 
 @media screen and (min-width: 768px) {
@@ -381,7 +381,7 @@ body {
 #nav-bar {
   position: relative;
   height: 50px;
-  background-color: #5477C9;
+  background-color: #5477c9;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -389,7 +389,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   #nav-bar {
-    background-color: #FDFDFD;
+    background-color: #fdfdfd;
     height: 60px;
     justify-content: left;
     padding: 0 40px;
@@ -420,26 +420,26 @@ body {
 #nav-bar-title {
   font-size: 1.25rem;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #ffffff;
   line-height: 1.4rem;
 }
 @media screen and (min-width: 768px) {
   #nav-bar-title {
     font-size: 1.56rem;
-    color: #5477C9;
+    color: #5477c9;
   }
 }
 
 .nav-bar-hamburger-menu-bar {
   width: 25px;
   height: 2px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 10px;
 }
 
 .nav-bar-nav-show {
   height: 180px !important;
-  border-bottom: 3px solid #5477C9;
+  border-bottom: 3px solid #5477c9;
 }
 
 #main-nav {
@@ -447,7 +447,7 @@ body {
   top: 50px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   width: 100%;
   display: flex;
   align-items: center;
@@ -464,26 +464,26 @@ body {
     right: 0;
     left: auto;
     flex-direction: row;
-    background-color: #5477C9;
+    background-color: #5477c9;
     border-bottom-left-radius: 100px;
   }
 }
 #main-nav-nav-item-current {
-  background-color: #EE5252;
+  background-color: #ee5252;
   border-radius: 10px;
 }
 @media screen and (min-width: 768px) {
   #main-nav-nav-item-current {
     font-size: 1rem;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
   }
 }
 #main-nav-nav-item-current-link {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 @media screen and (min-width: 768px) {
   #main-nav-nav-item-current-link {
-    color: #2D2D2D;
+    color: #2d2d2d;
   }
 }
 
@@ -512,12 +512,12 @@ body {
 .main-nav-nav-item-link {
   font-size: 1.56rem;
   font-weight: 400;
-  color: #2D2D2D;
+  color: #2d2d2d;
 }
 @media screen and (min-width: 768px) {
   .main-nav-nav-item-link {
     font-size: 1rem;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 }
 
@@ -537,8 +537,8 @@ body {
   }
 }
 #home-page-header-card {
-  background-color: #FFFFFF;
-  border: 3px solid #2D2D2D;
+  background-color: #ffffff;
+  border: 3px solid #2d2d2d;
   border-radius: 20px;
   padding: 20px;
   box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.5);
@@ -557,7 +557,7 @@ body {
 #home-page-header-card-small-text {
   font-size: 1.1rem;
   font-weight: 300;
-  color: #2D2D2D;
+  color: #2d2d2d;
   line-height: 1.4rem;
 }
 @media screen and (min-width: 768px) {
@@ -569,7 +569,7 @@ body {
 #home-page-header-card-medium-text {
   font-size: 1.1rem;
   font-weight: 400;
-  color: #2D2D2D;
+  color: #2d2d2d;
   line-height: 1.4rem;
   padding-top: 15px;
 }
@@ -589,7 +589,7 @@ body {
 #home-page-header-card-large-text {
   font-size: 1.8rem;
   font-weight: 400;
-  color: #2D2D2D;
+  color: #2d2d2d;
   line-height: 2.2rem;
   padding-top: 15px;
 }
@@ -652,20 +652,20 @@ body {
 }
 
 #home-page-header-link-github {
-  background-color: #0F0C0D;
+  background-color: #0f0c0d;
 }
 #home-page-header-link-github-text {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 #home-page-header-link-linkedin {
-  background-color: #2867B2;
+  background-color: #2867b2;
 }
 #home-page-header-link-linkedin-text {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 #home-page-header-link-email {
   display: none;
-  background-color: #EE5252;
+  background-color: #ee5252;
 }
 @media screen and (min-width: 768px) {
   #home-page-header-link-email {
@@ -675,13 +675,13 @@ body {
   }
 }
 #home-page-header-link-email-text {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 #projects-page-header-card {
   width: 280px;
   margin: auto;
-  border: 3px solid #2D2D2D;
+  border: 3px solid #2d2d2d;
   border-radius: 20px;
   padding: 20px;
   box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.5);
@@ -695,7 +695,7 @@ body {
 #projects-page-header-card-medium-text {
   font-size: 1.1rem;
   font-weight: 400;
-  color: #2D2D2D;
+  color: #2d2d2d;
   text-align: center;
   padding-top: 15px;
 }
@@ -713,7 +713,7 @@ body {
 #projects-page-header-card-large-text {
   font-size: 1.8rem;
   font-weight: 400;
-  color: #2D2D2D;
+  color: #2d2d2d;
   text-align: center;
   padding-top: 5px;
 }
@@ -760,7 +760,7 @@ body {
 .section-heading {
   font-size: 1.2rem;
   font-weight: 400;
-  color: #EE5252;
+  color: #ee5252;
   position: relative;
   display: inline-block;
   margin: 0 20px;
@@ -785,13 +785,13 @@ body {
   margin-top: 2px;
   width: 30px;
   height: 1px;
-  background-color: #EE5252;
+  background-color: #ee5252;
 }
 
 .about-me-paragraph {
   font-size: 1rem;
   font-weight: 300;
-  color: #2D2D2D;
+  color: #2d2d2d;
   line-height: 1.5rem;
   text-indent: 2rem;
   padding-top: 10px;
@@ -849,7 +849,7 @@ body {
   margin-bottom: 10px;
 }
 .project-card-heading-web-dev {
-  color: #5477C9;
+  color: #5477c9;
 }
 .project-card-buttons {
   display: flex;
@@ -862,7 +862,7 @@ body {
 .project-card-button {
   font-size: 1rem;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -872,7 +872,7 @@ body {
   box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.5);
 }
 .project-card-button-web-dev {
-  background-color: #5477C9;
+  background-color: #5477c9;
 }
 .project-card-img {
   display: block;
@@ -887,12 +887,12 @@ body {
   margin-bottom: 10px;
 }
 .project-card-sub-heading-web-dev {
-  color: #5477C9;
+  color: #5477c9;
 }
 .project-card-paragraph {
   font-size: 1rem;
   font-weight: 300;
-  color: #2D2D2D;
+  color: #2d2d2d;
   line-height: 1.3rem;
   text-align: justify;
   margin-bottom: 20px;
@@ -919,7 +919,7 @@ body {
   align-items: center;
   font-size: 1.13rem;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
   width: 45%;
   height: 35px;
@@ -927,18 +927,18 @@ body {
   border-radius: 20px;
 }
 .project-card-pill-web-dev {
-  background-color: #5477C9;
+  background-color: #5477c9;
 }
 .project-card-pill-other {
-  background-color: #D40069;
+  background-color: #d40069;
 }
 .project-card-web-dev {
-  border: 3px solid #5477C9;
+  border: 3px solid #5477c9;
 }
 
 footer {
   height: 50px;
-  background-color: #ECECEC;
+  background-color: #ececec;
   margin-top: 40px;
   display: flex;
   justify-content: space-between;
@@ -960,7 +960,7 @@ footer {
 #footer-website-copyright {
   font-size: 0.75rem;
   font-weight: 100;
-  color: #5477C9;
+  color: #5477c9;
   line-height: 1.1rem;
 }
 @media screen and (min-width: 768px) {
@@ -972,7 +972,7 @@ footer {
 #footer-contact-me-button-link {
   width: 110px;
   height: 30px;
-  border: 2px solid #33B121;
+  border: 2px solid #33b121;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -981,7 +981,7 @@ footer {
 #footer-contact-me-button-link-text {
   font-size: 1rem;
   font-weight: 300;
-  color: #33B121;
+  color: #33b121;
   line-height: 1.25rem;
 }
 
@@ -1026,7 +1026,7 @@ footer {
 .education-card-text {
   font-size: 1rem;
   font-weight: 400;
-  color: #2D2D2D;
+  color: #2d2d2d;
   line-height: 1.25;
   margin: 5px 0 5px 10px;
 }
@@ -1036,11 +1036,11 @@ footer {
 }
 
 #treehouse-education-card {
-  border: 3px solid #5FCF80;
+  border: 3px solid #5fcf80;
 }
 
 #udemy-education-card {
-  border: 3px solid #E15F53;
+  border: 3px solid #e15f53;
 }
 
 #skills {
@@ -1077,7 +1077,7 @@ footer {
 .skills-group-pill {
   font-size: 1rem;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
   padding: 7px 0;
   border-radius: 20px;
@@ -1090,29 +1090,29 @@ footer {
   }
 }
 .skills-group-web-dev-pill {
-  background-color: #5477C9;
+  background-color: #5477c9;
 }
 .skills-group-ios-dev-pill {
-  background-color: #DA6500;
+  background-color: #da6500;
 }
 .skills-group-ui-design-pill {
-  background-color: #33B121;
+  background-color: #33b121;
 }
 .skills-group-other-pill {
-  background-color: #D40069;
+  background-color: #d40069;
 }
 
 #skills-group-web-dev-heading {
-  color: #5477C9;
+  color: #5477c9;
 }
 #skills-group-ios-dev-heading {
-  color: #DA6500;
+  color: #da6500;
 }
 #skills-group-ui-design-heading {
-  color: #33B121;
+  color: #33b121;
 }
 #skills-group-other-heading {
-  color: #D40069;
+  color: #d40069;
 }
 
 /*# sourceMappingURL=styles.css.map */

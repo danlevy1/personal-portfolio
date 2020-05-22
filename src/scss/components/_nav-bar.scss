@@ -7,62 +7,65 @@
 // =============================
 
 #nav-bar {
-    position: relative;
-    height: 50px;
-    background-color: $primary-blue;
-    @include flex-container($justify-content: center, $align-items: center);
-    padding: 0 20px;
+  position: relative;
+  height: 50px;
+  background-color: $primary-blue;
+  @include flex-container($justify-content: center, $align-items: center);
+  padding: 0 20px;
+
+  @include media-query($breakpoint: $tablet-breakpoint) {
+    background-color: $primary-gray;
+    height: 60px;
+    justify-content: left;
+    padding: 0 40px;
+  }
+
+  @include media-query($breakpoint: $desktop-breakpoint) {
+    height: 80px;
+    padding: 0 60px;
+  }
+
+  &-hamburger-menu {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    width: 25px;
+    height: 18px;
+    @include flex-container(
+      $justify-content: space-between,
+      $align-items: null
+    );
+    flex-direction: column;
 
     @include media-query($breakpoint: $tablet-breakpoint) {
-        background-color: $primary-gray;
-        height: 60px;
-        justify-content: left;
-        padding: 0 40px;
+      display: none;
     }
+  }
 
-    @include media-query($breakpoint: $desktop-breakpoint) {
-        height: 80px;
-        padding: 0 60px;
-    }
+  &-title {
+    @include text(
+      $font-size: 1.25rem,
+      $font-weight: 400,
+      $color: $primary-white,
+      $line-height: 1.4rem
+    );
 
-    &-hamburger-menu {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 20px;
-        width: 25px;
-        height: 18px;
-        @include flex-container($justify-content: space-between, $align-items: null);
-        flex-direction: column;
-    
-        @include media-query($breakpoint: $tablet-breakpoint) {
-            display: none;
-        }
+    @include media-query($breakpoint: $tablet-breakpoint) {
+      font-size: 1.56rem;
+      color: $primary-blue;
     }
-
-    &-title {
-        @include text(
-            $font-size: 1.25rem,
-            $font-weight: 400,
-            $color: $primary-white,
-            $line-height: 1.4rem
-        );
-    
-        @include media-query($breakpoint: $tablet-breakpoint) {
-            font-size: 1.56rem;
-            color: $primary-blue;
-        }
-    }
+  }
 }
 
 .nav-bar-hamburger-menu-bar {
-    width: 25px;
-    height: 2px;
-    background-color: $primary-white;
-    border-radius: 10px;
+  width: 25px;
+  height: 2px;
+  background-color: $primary-white;
+  border-radius: 10px;
 }
 
 .nav-bar-nav-show {
-    height: 180px !important;
-    border-bottom: 3px solid $primary-blue;
+  height: 180px !important;
+  border-bottom: 3px solid $primary-blue;
 }

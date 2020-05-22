@@ -7,53 +7,56 @@
 // =============================
 
 footer {
-    height: 50px;
-    background-color: $secondary-gray;
-    margin-top: 40px;
-    @include flex-container($justify-content: space-between, $align-items: center);
-    padding: 0 20px;
+  height: 50px;
+  background-color: $secondary-gray;
+  margin-top: 40px;
+  @include flex-container(
+    $justify-content: space-between,
+    $align-items: center
+  );
+  padding: 0 20px;
 
-    @include media-query($breakpoint: $tablet-breakpoint) {
-        height: 60px;
-        justify-content: left;
-    }
+  @include media-query($breakpoint: $tablet-breakpoint) {
+    height: 60px;
+    justify-content: left;
+  }
 
-    @include media-query($breakpoint: $tablet-breakpoint) {
-        height: 80px;
-    }
+  @include media-query($breakpoint: $tablet-breakpoint) {
+    height: 80px;
+  }
 }
 
 #footer {
-    &-website-copyright {
+  &-website-copyright {
+    @include text(
+      $font-size: 0.75rem,
+      $font-weight: 100,
+      $color: $primary-blue,
+      $line-height: 1.1rem
+    );
+  }
+
+  &-contact-me-button {
+    @include media-query($breakpoint: $tablet-breakpoint) {
+      margin: auto;
+      padding-right: 89px;
+    }
+
+    &-link {
+      width: 110px;
+      height: 30px;
+      border: 2px solid $primary-green;
+      border-radius: 10px;
+      @include flex-container($justify-content: center, $align-items: center);
+
+      &-text {
         @include text(
-            $font-size: 0.75rem,
-            $font-weight: 100,
-            $color: $primary-blue,
-            $line-height: 1.1rem
+          $font-size: 1rem,
+          $font-weight: 300,
+          $color: $primary-green,
+          $line-height: 1.25rem
         );
+      }
     }
-
-    &-contact-me-button {
-        @include media-query($breakpoint: $tablet-breakpoint) {
-            margin: auto;
-            padding-right: 89px;
-        }
-
-        &-link {
-            width: 110px;
-            height: 30px;
-            border: 2px solid $primary-green;
-            border-radius: 10px;
-            @include flex-container($justify-content: center, $align-items: center);
-
-            &-text {
-                @include text(
-                    $font-size: 1rem,
-                    $font-weight: 300,
-                    $color: $primary-green,
-                    $line-height: 1.25rem
-                );
-            }
-        }
-    }
+  }
 }

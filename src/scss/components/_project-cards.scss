@@ -7,134 +7,150 @@
 // =============================
 
 #project-cards {
-    @include flex-container($justify-content: center, $align-items: start);
-    flex-wrap: wrap;
+  @include flex-container($justify-content: center, $align-items: start);
+  flex-wrap: wrap;
 
-    @include media-query($breakpoint: $card-horizontal-split-breakpoint) {
-        justify-content: space-between;
-    }
+  @include media-query($breakpoint: $card-horizontal-split-breakpoint) {
+    justify-content: space-between;
+  }
 }
 
 .project-card {
-    border-radius: 10px;
-    box-shadow: $primary-box-shadow;
-    margin: 20px 20px 0;
-    padding: 20px 10px 0;
-    width: 280px;
+  border-radius: 10px;
+  box-shadow: $primary-box-shadow;
+  margin: 20px 20px 0;
+  padding: 20px 10px 0;
+  width: 280px;
 
-    @include media-query($breakpoint: $tablet-breakpoint) {
-        margin: 30px 40px;
-    }
+  @include media-query($breakpoint: $tablet-breakpoint) {
+    margin: 30px 40px;
+  }
 
-    @include media-query($breakpoint: $tablet-breakpoint) {
-        margin: 30px 60px;
-    }
+  @include media-query($breakpoint: $tablet-breakpoint) {
+    margin: 30px 60px;
+  }
 
-    &-heading {
-        @include text($font-size: 1.13rem, $font-weight: 300, $color: null, $line-height: null);
-        text-align: center;
-        margin-bottom: 10px;
-
-        &-web-dev {
-            color: $primary-blue;
-        }
-    }
-
-    &-buttons {
-        @include flex-container($justify-content: space-between, $align-items: center);
-        width: 200px;
-        margin: auto;
-        margin-bottom: 20px;
-    }
-
-    &-button {
-        @include text(
-            $font-size: 1rem,
-            $font-weight: 400,
-            $color: $primary-white,
-            $line-height: null
-        );
-        @include flex-container($justify-content: center, $align-items: center);
-        width: 90px;
-        height: 30px;
-        border-radius: 20px;
-        box-shadow: $primary-box-shadow;
-
-        &-web-dev {
-            background-color: $primary-blue;
-        }
-    }
-
-    &-img {
-        display: block;
-        width: 90%;
-        margin: auto;
-        box-shadow: $primary-box-shadow;
-        margin-bottom: 20px;
-    }
-
-    &-sub-heading {
-        @include text($font-size: 1.13rem, $font-weight: 300, $color: null, $line-height: null);
-        margin-bottom: 10px;
-
-        &-web-dev {
-            color: $primary-blue;
-        }
-    }
-
-    &-paragraph {
-        @include text(
-            $font-size: 1rem,
-            $font-weight: 300,
-            $color: $primary-black,
-            $line-height: 1.3rem
-        );
-        text-align: justify;
-        margin-bottom: 20px;
-    }
-
-    &-link {
-        @include text(
-            $font-size: inherit,
-            $font-weight: inherit,
-            $color: inherit,
-            $line-height: inherit
-        );
-        text-decoration: underline;
-    }
-
-    &-pills {
-        max-height: 180px;
-        @include flex-container($justify-content: space-between, $align-items: space-between);
-        flex-direction: column;
-        flex-wrap: wrap;
-        margin: auto;
-    }
-
-    &-pill {
-        @include flex-container($justify-content: center, $align-items: center);
-        @include text(
-            $font-size: 1.13rem,
-            $font-weight: 400,
-            $color: $primary-white,
-            $line-height: null
-        );
-        text-align: center;
-        width: 45%;
-        height: 35px;
-        margin-bottom: 10px;
-        border-radius: 20px;
-
-        &-web-dev {
-            background-color: $primary-blue;
-        }
-
-        &-other {
-            background-color: $primary-pink;
-        }
-    }
+  &-heading {
+    @include text(
+      $font-size: 1.13rem,
+      $font-weight: 300,
+      $color: null,
+      $line-height: null
+    );
+    text-align: center;
+    margin-bottom: 10px;
 
     &-web-dev {
-        border: 3px solid $primary-blue;
+      color: $primary-blue;
     }
+  }
+
+  &-buttons {
+    @include flex-container(
+      $justify-content: space-between,
+      $align-items: center
+    );
+    width: 200px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  &-button {
+    @include text(
+      $font-size: 1rem,
+      $font-weight: 400,
+      $color: $primary-white,
+      $line-height: null
+    );
+    @include flex-container($justify-content: center, $align-items: center);
+    width: 90px;
+    height: 30px;
+    border-radius: 20px;
+    box-shadow: $primary-box-shadow;
+
+    &-web-dev {
+      background-color: $primary-blue;
+    }
+  }
+
+  &-img {
+    display: block;
+    width: 90%;
+    margin: auto;
+    box-shadow: $primary-box-shadow;
+    margin-bottom: 20px;
+  }
+
+  &-sub-heading {
+    @include text(
+      $font-size: 1.13rem,
+      $font-weight: 300,
+      $color: null,
+      $line-height: null
+    );
+    margin-bottom: 10px;
+
+    &-web-dev {
+      color: $primary-blue;
+    }
+  }
+
+  &-paragraph {
+    @include text(
+      $font-size: 1rem,
+      $font-weight: 300,
+      $color: $primary-black,
+      $line-height: 1.3rem
+    );
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+
+  &-link {
+    @include text(
+      $font-size: inherit,
+      $font-weight: inherit,
+      $color: inherit,
+      $line-height: inherit
+    );
+    text-decoration: underline;
+  }
+
+  &-pills {
+    max-height: 180px;
+    @include flex-container(
+      $justify-content: space-between,
+      $align-items: space-between
+    );
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+
+  &-pill {
+    @include flex-container($justify-content: center, $align-items: center);
+    @include text(
+      $font-size: 1.13rem,
+      $font-weight: 400,
+      $color: $primary-white,
+      $line-height: null
+    );
+    text-align: center;
+    width: 45%;
+    height: 35px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+
+    &-web-dev {
+      background-color: $primary-blue;
+    }
+
+    &-other {
+      background-color: $primary-pink;
+    }
+  }
+
+  &-web-dev {
+    border: 3px solid $primary-blue;
+  }
 }
