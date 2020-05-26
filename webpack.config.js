@@ -1,4 +1,5 @@
 const webpackMerge = require("webpack-merge");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const modeConfig = (env) => require(`./build-utils/webpack.${env}`)(env);
 
@@ -27,8 +28,38 @@ module.exports = ({ mode }) => {
                             },
                         },
                     },
+                    {
+                        test: /\.(gif|jpe?g|tiff|png|webp|bmp|svg)$/,
+                        use: {
+                            loader: "file-loader",
+                            options: {
+                                outputPath: "img/",
+                                name: "[name].[ext]",
+                            },
+                        },
+                    },
+                    {
+                        test: /\.pdf$/,
+                        use: {
+                            loader: "file-loader",
+                            options: {
+                                outputPath: "files/",
+                                name: "[name].[ext]",
+                            },
+                        },
+                    },
                 ],
             },
+            plugins: [
+                new HtmlWebpackPlugin({
+                    filename: "index.html",
+                    template: "./src/index.html",
+                }),
+                new HtmlWebpackPlugin({
+                    filename: "projects.html",
+                    template: "./src/projects.html",
+                }),
+            ],
         },
         modeConfig(mode)
     );

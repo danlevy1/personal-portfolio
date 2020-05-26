@@ -3,6 +3,20 @@
  * @author Dan Levy <danlevy124@gmail.com>
  * @module
  */
+import "../img/about-me-header-img.png";
+import "../img/florida-tech-logo.jpg";
+import "../img/github-logo.svg";
+import "../img/linkedin-logo.svg";
+import "../img/projects-header-img.png";
+import "../img/the-music-assistant-screenshot.png";
+import "../img/treehouse-logo.svg";
+import "../img/udemy-logo.svg";
+import "../img/web-app-dashboard-screenshot.png";
+import "../img/web-style-guide-screenshot.png";
+
+import "../files/dan-levy-resume.pdf";
+
+import "../scss/styles.scss";
 
 /**
  * Initial function when page loads

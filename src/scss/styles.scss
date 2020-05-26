@@ -6,16 +6,8 @@
 // Created Date: 9/13/2019
 // =============================
 
-// Header for css/styles.css
-/* =============================
- * File Path: css/styles.scss
- * Description: CSS styles compiled from SCSS
- * Author: Dan Levy
- * Email: danlevy124@gmail.com
- * Created Date: 9/13/2019
-============================= */
-
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap");
+@import "~normalize.css";
 @import "utilities/index";
 @import "base/index";
 @import "components/index";

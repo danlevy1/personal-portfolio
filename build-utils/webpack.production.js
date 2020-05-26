@@ -1,22 +1,19 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = () => ({
     output: {
         filename: "[chunkhash].js",
         path: path.resolve(__dirname, "../", "build/"),
     },
-    devtool: "cheap-source-map",
-    plugins: [
-        new HtmlWebpackPlugin({
-            filename: "index.html",
-            template: "./src/index.html",
-        }),
-        new HtmlWebpackPlugin({
-            filename: "projects.html",
-            template: "./src/projects.html",
-        }),
-        new CleanWebpackPlugin(),
-    ],
+    plugins: [new CleanWebpackPlugin(), new MiniCssExtractPlugin()],
+    module: {
+        rules: [
+            {
+                test: /\.scss$/,
+                use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+            },
+        ],
+    },
 });

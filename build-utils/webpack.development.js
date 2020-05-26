@@ -1,5 +1,4 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = () => ({
     output: {
@@ -14,15 +13,27 @@ module.exports = () => ({
         },
         port: 3000,
     },
-    devtool: "cheap-module-eval-source-map",
-    plugins: [
-        new HtmlWebpackPlugin({
-            filename: "index.html",
-            template: "./src/index.html",
-        }),
-        new HtmlWebpackPlugin({
-            filename: "projects.html",
-            template: "./src/projects.html",
-        }),
-    ],
+    module: {
+        rules: [
+            {
+                test: /\.scss$/,
+                use: [
+                    "style-loader",
+                    {
+                        loader: "css-loader",
+                        options: {
+                            sourceMap: true,
+                        },
+                    },
+                    {
+                        loader: "sass-loader",
+                        options: {
+                            sourceMap: true,
+                        },
+                    },
+                ],
+            },
+        ],
+    },
+    devtool: "inline-cheap-source-map",
 });
