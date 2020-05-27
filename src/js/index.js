@@ -14,7 +14,7 @@ import "../img/udemy-logo.svg";
 import "../img/web-app-dashboard-screenshot.png";
 import "../img/web-style-guide-screenshot.png";
 
-import "../files/dan-levy-resume.pdf";
+import "../files/daniel-levy-resume.pdf";
 
 import "../scss/styles.scss";
 
