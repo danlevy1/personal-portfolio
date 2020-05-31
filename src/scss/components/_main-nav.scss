@@ -1,89 +1,129 @@
 // =============================
-// File Path: scss/components/_header.scss
-// Description: Header styles
+// Description: Main navigation component styles
 // Author: Dan Levy
 // Email: danlevy124@gmail.com
-// Created Date: 1/12/2020
 // =============================
 
 #main-nav {
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: $primary-white;
-  width: 100%;
-  @include flex-container($justify-content: null, $align-items: center);
-  flex-direction: column;
-  height: 0;
-  transition: height 0.4s;
+    position: absolute;
+    top: 43px;
+    left: 0;
 
-  @include media-query($breakpoint: $tablet-breakpoint) {
-    height: 100%;
-    width: 75%;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0;
-    left: auto;
-    flex-direction: row;
-    background-color: $primary-blue;
-    border-bottom-left-radius: 100px;
-  }
+    width: 100%;
 
-  &-nav-item-current {
-    background-color: $primary-red;
-    border-radius: 10px;
+    background-color: $white-color;
+
+    padding: 13px 0;
+
+    z-index: 1000;
+
+    box-shadow: $primary-box-shadow;
+
+    transition: transform 0.4s ease-in-out;
+    transform-origin: top;
+
+    transform: scaleY(1);
 
     @include media-query($breakpoint: $tablet-breakpoint) {
-      font-size: 1rem;
-      background-color: $primary-white;
-    }
+        position: initial;
 
-    &-link {
-      color: $primary-white;
+        width: auto;
 
-      @include media-query($breakpoint: $tablet-breakpoint) {
-        color: $primary-black;
-      }
+        background-color: transparent;
+
+        padding: 0;
+        margin: auto;
+
+        z-index: initial;
+
+        box-shadow: none;
     }
-  }
 }
 
-.main-nav-nav-item {
-  display: none;
-  text-align: center;
-  width: 175px;
-  padding: 10px 0;
-  margin: 10px auto 0;
+.main-nav-show-instantly {
+    transition: none !important;
+    transform: scaleY(1);
+}
 
-  @include media-query($breakpoint: $tablet-breakpoint) {
-    display: block;
-    width: 75px;
-    margin: 0 20px 0 0;
-    padding: 8px 0;
-    font-size: 1rem;
-    line-height: null;
+.main-nav-hide {
+    transform: scaleY(0) !important;
+}
 
-    &:first-child {
-      margin-left: auto;
-    }
-  }
+.main-nav-hide-instantly {
+    transition: none !important;
+    transform: scaleY(0);
+}
 
-  &-show {
-    display: initial;
-  }
+.main-nav-list-item {
+    width: 40%;
 
-  &-link {
-    @include text(
-      $font-size: 1.56rem,
-      $font-weight: 400,
-      $color: $primary-black,
-      $line-height: null
-    );
+    margin: auto;
+
+    list-style: none;
 
     @include media-query($breakpoint: $tablet-breakpoint) {
-      font-size: 1rem;
-      color: $primary-white;
+        display: inline-block;
+
+        width: auto;
+
+        margin-left: 10px;
     }
-  }
+
+    @include media-query($breakpoint: $desktop-breakpoint) {
+        margin-left: 20px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+
+.main-nav-link {
+    display: block;
+
+    @include text(
+        $font-size: 1.125rem,
+        $font-weight: 300,
+        $color: $black-color,
+        $line-height: null
+    );
+    text-align: center;
+
+    padding: 5px 0;
+    margin: 8px 0;
+
+    border-radius: 6px;
+
+    @include media-query($breakpoint: $tablet-breakpoint) {
+        color: $white-color;
+
+        padding: 5px 15px;
+    }
+
+    @include media-query($breakpoint: $desktop-breakpoint) {
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            color: $black-color;
+
+            background-color: $white-color;
+        }
+    }
+}
+
+#main-nav-current-link {
+    @include text(
+        $font-size: 1.125rem,
+        $font-weight: 400,
+        $color: $white-color,
+        $line-height: null
+    );
+
+    background-color: $red-color;
+
+    @include media-query($breakpoint: $tablet-breakpoint) {
+        color: $black-color;
+
+        background-color: $white-color;
+    }
 }

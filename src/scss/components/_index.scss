@@ -1,19 +1,9 @@
 // =============================
-// File Path: scss/components/_index.scss
 // Description: Imported component styles
 // Author: Dan Levy
 // Email: danlevy124@gmail.com
-// Created Date: 9/13/2019
 // =============================
 
-@import "nav-bar";
+@import "page-header";
 @import "main-nav";
-@import "home-page-header";
-@import "projects-page-header";
-@import "section";
-@import "section-heading";
-@import "about-me-paragraph";
-@import "project-cards";
-@import "footer";
-@import "education-cards";
-@import "skills";
+@import "social-links";

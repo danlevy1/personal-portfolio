@@ -1,3 +1,4 @@
+const path = require("path");
 const webpackMerge = require("webpack-merge");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
@@ -33,7 +34,10 @@ module.exports = ({ mode }) => {
                         use: {
                             loader: "file-loader",
                             options: {
-                                outputPath: "img/",
+                                outputPath: (_, resourcePath, context) =>
+                                    path
+                                        .relative(context, resourcePath)
+                                        .replace("src/", ""),
                                 name: "[name].[ext]",
                             },
                         },
@@ -43,7 +47,10 @@ module.exports = ({ mode }) => {
                         use: {
                             loader: "file-loader",
                             options: {
-                                outputPath: "files/",
+                                outputPath: (_, resourcePath, context) =>
+                                    path
+                                        .relative(context, resourcePath)
+                                        .replace("src/", ""),
                                 name: "[name].[ext]",
                             },
                         },

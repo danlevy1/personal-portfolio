@@ -1,0 +1,51 @@
+// =============================
+// Description: Social links component styles
+// Author: Dan Levy
+// Email: danlevy124@gmail.com
+// =============================
+
+#social-links {
+    grid-area: social-links;
+
+    @include flex($justify-content: center, $align-items: center);
+
+    margin-top: 20px;
+
+    @include media-query($breakpoint: $tablet-breakpoint) {
+        justify-content: flex-end;
+
+        margin: 0 20px 0 0;
+    }
+
+    @include media-query($breakpoint: $desktop-breakpoint) {
+        margin-right: 40px;
+    }
+}
+
+#social-link {
+    display: block;
+
+    line-height: 0;
+}
+
+.social-links-list-item {
+    display: inline-block;
+
+    margin-left: 40px;
+
+    transition: transform 0.2s ease-in-out;
+
+    &:first-child {
+        margin-left: 0;
+    }
+
+    @include media-query($breakpoint: $desktop-breakpoint) {
+        &:hover {
+            transform: translateY(-5px);
+        }
+    }
+}
+
+.social-link-img {
+    width: 30px;
+}

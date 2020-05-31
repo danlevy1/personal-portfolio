@@ -1,21 +1,19 @@
 // =============================
-// File Path: scss/utilities/_variables.scss
 // Description: SCSS Variables
 // Author: Dan Levy
 // Email: danlevy124@gmail.com
-// Created Date: 9/13/2019
 // =============================
 
 // -----------------------------
 // COLOR VARIABLES
 // -----------------------------
-$primary-blue: #5477c9;
-$primary-orange: #da6500;
-$primary-red: #ee5252;
-$primary-pink: #d40069;
-$primary-green: #33b121;
-$primary-black: #2d2d2d;
-$primary-white: #ffffff;
+$primary-color: #5477c9;
+$orange-color: #da6500;
+$red-color: #ee5252;
+$pin-colork: #d40069;
+$gre-coloren: #33b121;
+$black-color: #2d2d2d;
+$white-color: #ffffff;
 $primary-gray: #fdfdfd;
 $secondary-gray: #ececec;
 $github-black: #0f0c0d;
@@ -32,6 +30,5 @@ $primary-box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.5);
 // -----------------------------
 // BREAKPOINT VARIABLES
 // -----------------------------
-$card-horizontal-split-breakpoint: 640px;
 $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1024px;

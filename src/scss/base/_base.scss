@@ -1,9 +1,7 @@
 // =============================
-// File Path: scss/base/_base.scss
 // Description: Base element styles
 // Author: Dan Levy
 // Email: danlevy124@gmail.com
-// Created Date: 9/13/2019
 // =============================
 
 * {
@@ -11,6 +9,7 @@
     margin: 0;
     padding: 0;
 }
+
 a {
     text-decoration: none;
 }
@@ -29,19 +28,5 @@ main {
     @include media-query($breakpoint: $desktop-breakpoint) {
         max-width: 1100px;
         margin: auto;
-    }
-}
-
-.hide {
-    display: none;
-}
-
-#hometown {
-    max-width: 420px;
-}
-
-#education {
-    @include media-query($breakpoint: $tablet-breakpoint) {
-        max-width: 800px;
     }
 }
