@@ -1,0 +1,39 @@
+// =============================
+// Description: Section heading component styles
+// Author: Dan Levy
+// Email: danlevy124@gmail.com
+// =============================
+
+.section-heading {
+    position: relative;
+
+    @include text(
+        $font-size: 1rem,
+        $font-weight: 400,
+        $color: $red-color,
+        $line-height: null
+    );
+
+    margin: 0 0 20px;
+
+    &::after {
+        content: "";
+
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+
+        width: 30px;
+        height: 2px;
+
+        background-color: $red-color;
+    }
+
+    @include media-query($breakpoint: $tablet-breakpoint) {
+        font-size: 1.25rem;
+    }
+
+    @include media-query($breakpoint: $desktop-breakpoint) {
+        font-size: 1.5625rem;
+    }
+}

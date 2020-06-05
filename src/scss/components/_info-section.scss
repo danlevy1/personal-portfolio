@@ -1,0 +1,17 @@
+// =============================
+// Description: Info section component styles
+// Author: Dan Levy
+// Email: danlevy124@gmail.com
+// =============================
+
+.info-section {
+    margin: 20px 10px 0;
+
+    @include media-query($breakpoint: $tablet-breakpoint) {
+        margin: 40px 20px 0;
+    }
+
+    @include media-query($breakpoint: $desktop-breakpoint) {
+        margin: 60px 40px 0;
+    }
+}

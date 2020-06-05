@@ -1,0 +1,33 @@
+// =============================
+// Description: Info paragraph component styles
+// Author: Dan Levy
+// Email: danlevy124@gmail.com
+// =============================
+
+.info-paragraph {
+    @include text(
+        $font-size: 1rem,
+        $font-weight: 300,
+        $color: $black-color,
+        $line-height: 1.25rem
+    );
+    text-align: justify;
+    text-indent: 20px;
+
+    margin-bottom: 10px;
+
+    @include media-query($breakpoint: $tablet-breakpoint) {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+    }
+
+    &-img {
+        float: left;
+
+        height: 90px;
+
+        @include media-query($breakpoint: $tablet-breakpoint) {
+            height: 110px;
+        }
+    }
+}
