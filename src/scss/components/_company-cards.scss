@@ -10,9 +10,16 @@
         $grid-template-columns: repeat(auto-fill, 300px),
         $align-items: null
     );
+    justify-content: center;
     gap: 20px;
 
     @include media-query($breakpoint: $tablet-breakpoint) {
         gap: 40px;
+        justify-content: initial;
+    }
+
+    @include media-query($breakpoint: $desktop-breakpoint) {
+        row-gap: 50px;
+        column-gap: 100px;
     }
 }

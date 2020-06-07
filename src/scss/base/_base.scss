@@ -18,10 +18,3 @@ body {
     font-family: "Roboto", sans-serif;
     background-color: $primary-background-color;
 }
-
-main {
-    @include media-query($breakpoint: $desktop-breakpoint) {
-        max-width: 1100px;
-        margin: auto;
-    }
-}

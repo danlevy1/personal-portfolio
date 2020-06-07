@@ -12,15 +12,24 @@
     border: 3px solid;
     border-radius: 10px;
 
+    @include media-query($breakpoint: $desktop-breakpoint) {
+        transition: background-color 0.2s ease-in-out;
+
+        &:hover {
+            background-color: $light-gray-color;
+        }
+    }
+
     &-logo {
         display: block;
 
-        height: 45px;
+        height: 40px;
 
         margin: auto;
     }
 
-    &-position {
+    &-position,
+    &-degree {
         @include text(
             $font-size: 1rem,
             $font-weight: 400,
@@ -29,21 +38,11 @@
         );
         text-align: center;
 
-        margin-top: 10px;
+        margin-top: 20px;
     }
 
-    &-dates {
-        @include text(
-            $font-size: 1rem,
-            $font-weight: 300,
-            $color: $black-color,
-            $line-height: null
-        );
-        text-align: center;
-
-        margin-top: 10px;
-    }
-
+    &-dates,
+    &-grade,
     &-work {
         @include text(
             $font-size: 1rem,
@@ -64,6 +63,12 @@
 
     background-color: $primary-background-color;
     background-clip: padding-box;
+
+    @include media-query($breakpoint: $desktop-breakpoint) {
+        &:hover {
+            background-color: $light-gray-color;
+        }
+    }
 
     &::after {
         content: "";
@@ -89,6 +94,18 @@
     }
 }
 
-#company-card-kaleida-health {
-    border-color: $kaleida-health-color;
+#company-card-florida-tech {
+    border-color: $florida-tech-color;
+}
+
+#company-card-treehouse {
+    border-color: $treehouse-color;
+}
+
+#company-card-udemy {
+    border-color: $udemy-color;
+}
+
+#company-card-frontend-masters {
+    border-color: $frontend-masters-color;
 }

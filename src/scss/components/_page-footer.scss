@@ -1,0 +1,24 @@
+// =============================
+// Description: Page footer component styles
+// Author: Dan Levy
+// Email: danlevy124@gmail.com
+// =============================
+
+#page-footer {
+    @include flex($justify-content: center, $align-items: center);
+    width: 100%;
+    height: 50px;
+
+    margin-top: 40px;
+
+    background-color: $primary-color;
+
+    &-copyright {
+        @include text(
+            $font-size: 0.8rem,
+            $font-weight: 300,
+            $color: $white-color,
+            $line-height: null
+        );
+    }
+}
