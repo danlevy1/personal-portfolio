@@ -4,6 +4,8 @@ import "../js/header";
 // Logo imports
 import "../assets/logos/github-logo.svg";
 import "../assets/logos/linkedin-logo.svg";
+import "../assets/logos/qualtrics-logo.svg";
+import "../assets/logos/kaleida-health-logo.svg";
 
 // Icon imports
 import "../assets/icons/email-icon.svg";
