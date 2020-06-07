@@ -1,0 +1,94 @@
+// =============================
+// Description: Company card component styles
+// Author: Dan Levy
+// Email: danlevy124@gmail.com
+// =============================
+
+.company-card {
+    box-shadow: $primary-box-shadow;
+
+    padding: 10px;
+
+    border: 3px solid;
+    border-radius: 10px;
+
+    &-logo {
+        display: block;
+
+        height: 45px;
+
+        margin: auto;
+    }
+
+    &-position {
+        @include text(
+            $font-size: 1rem,
+            $font-weight: 400,
+            $color: $black-color,
+            $line-height: 1.25rem
+        );
+        text-align: center;
+
+        margin-top: 10px;
+    }
+
+    &-dates {
+        @include text(
+            $font-size: 1rem,
+            $font-weight: 300,
+            $color: $black-color,
+            $line-height: null
+        );
+        text-align: center;
+
+        margin-top: 10px;
+    }
+
+    &-work {
+        @include text(
+            $font-size: 1rem,
+            $font-weight: 300,
+            $color: $black-color,
+            $line-height: null
+        );
+        text-align: center;
+
+        margin-top: 10px;
+    }
+}
+
+#company-card-qualtrics {
+    position: relative;
+
+    border-color: transparent;
+
+    background-color: $primary-background-color;
+    background-clip: padding-box;
+
+    &::after {
+        content: "";
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        margin: -3px;
+        border-radius: inherit;
+
+        background: linear-gradient(
+            to right,
+            $qualtrics-seaform-color,
+            $qualtrics-glacier-color,
+            $qualtrics-cobalt-color,
+            $qualtrics-nightshade-color
+        );
+
+        z-index: -1;
+    }
+}
+
+#company-card-kaleida-health {
+    border-color: $kaleida-health-color;
+}

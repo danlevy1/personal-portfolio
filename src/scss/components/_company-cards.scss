@@ -1,0 +1,18 @@
+// =============================
+// Description: Company cards container component styles
+// Author: Dan Levy
+// Email: danlevy124@gmail.com
+// =============================
+
+#company-cards {
+    @include grid(
+        $grid-template-rows: auto,
+        $grid-template-columns: repeat(auto-fill, 300px),
+        $align-items: null
+    );
+    gap: 20px;
+
+    @include media-query($breakpoint: $tablet-breakpoint) {
+        gap: 40px;
+    }
+}
