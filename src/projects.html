@@ -14,9 +14,9 @@
     </head>
     <body>
         <!-- Header -->
-        <header id="page-header" class="page-header-clip">
+        <header id="page-header" class="projects-page-header page-header-clip">
             <!-- Background -->
-            <div id="page-header-bg"></div>
+            <div id="page-header-bg" class="projects-page-header-bg"></div>
 
             <!-- Hamburger icon -->
             <button id="hamburger-button">
@@ -89,9 +89,145 @@
                     /></a>
                 </li>
             </ul>
-
-            <!-- Title -->
-            <h1 id="page-header-title">Front-End Web Developer</h1>
         </header>
+
+        <main>
+            <!-- Page hero -->
+            <section id="projects-hero">
+                <h2 id="projects-hero-title">Projects</h2>
+                <img
+                    id="projects-hero-img"
+                    src="./assets/images/projects-hero.png"
+                    alt="Projects Hero Image"
+                />
+            </section>
+
+            <section id="projects">
+                <!-- The Music Assistant -->
+                <section id="tma-project" class="project">
+                    <h1 class="project-name">The Music Assistant</h1>
+                    <h2 class="project-type">Senior Design Project</h2>
+
+                    <div class="project-links">
+                        <a
+                            id="tma-project-link"
+                            class="project-link"
+                            href="https://github.com/The-Music-Assistant/web-app"
+                            target="_blank"
+                            >Repository</a
+                        >
+                        <a
+                            id="tma-project-link"
+                            class="project-link"
+                            href="https://github.com/The-Music-Assistant/web-app"
+                            target="_blank"
+                            >Demo</a
+                        >
+                    </div>
+
+                    <img
+                        class="project-screenshot"
+                        src="./assets/images/tma-screenshot.png"
+                        alt="The Music Assistant Screenshot"
+                    />
+
+                    <p class="project-description">
+                        The Music Assistant helps students learn sheet music and
+                        improve their singing ability. The UI provides real-time
+                        pitch feedback as the student sings. An algoithm on the
+                        back-end analyzes the student’s performance. The student
+                        can view their performance over time and generate
+                        exercises for measure(s) that need work.
+                    </p>
+                    <p class="project-tech-stack">
+                        Tech Stack: React, Redux, React Router, Web Audio API,
+                        MySQL, AWS, Node.js, Express, SCSS, and CSS Modules
+                    </p>
+                </section>
+
+                <!-- Web App Dashboard -->
+                <section id="web-app-dashboard-project" class="project">
+                    <h1 class="project-name">Web App Dashboard</h1>
+                    <h2 class="project-type">Course Project</h2>
+
+                    <div class="project-links">
+                        <a
+                            id="web-app-dashboard-project-link"
+                            class="project-link"
+                            href="https://github.com/danlevy1/web-app-dashboard"
+                            target="_blank"
+                            >Repository</a
+                        >
+                        <a
+                            id="web-app-dashboard-project-link"
+                            class="project-link"
+                            href="https://danlevy1.github.io/web-app-dashboard/"
+                            target="_blank"
+                            >Demo</a
+                        >
+                    </div>
+
+                    <img
+                        class="project-screenshot"
+                        src="./assets/images/web-app-dashboard-screenshot.png"
+                        alt="Web App Dashboard Screenshot"
+                    />
+
+                    <p class="project-description">
+                        The Web App Dashboard is a static website that uses
+                        Chart.js to display sample metrics. Some of these
+                        metrics include a line chart and a pie chart. The
+                        website also uses local storage to store user account
+                        preferences.
+                    </p>
+                    <p class="project-tech-stack">
+                        Tech Stack: JavaScript, Chart.js, Local Storage, and
+                        SCSS
+                    </p>
+                </section>
+
+                <!-- Web Style Guide -->
+                <section id="web-style-guide-project" class="project">
+                    <h1 class="project-name">Web Style Guide</h1>
+                    <h2 class="project-type">Course Project</h2>
+
+                    <div class="project-links">
+                        <a
+                            id="web-style-guide-project-link"
+                            class="project-link"
+                            href="https://github.com/danlevy1/web-style-guide"
+                            target="_blank"
+                            >Repository</a
+                        >
+                        <a
+                            id="web-style-guide-project-link"
+                            class="project-link"
+                            href="https://danlevy1.github.io/web-style-guide/"
+                            target="_blank"
+                            >Demo</a
+                        >
+                    </div>
+
+                    <img
+                        class="project-screenshot"
+                        src="./assets/images/web-style-guide-screenshot.png"
+                        alt="Web Style Guide Screenshot"
+                    />
+
+                    <p class="project-description">
+                        The Web Style Guide is a CSS component library. Example
+                        components include form elements, images, and buttons.
+                    </p>
+                    <p class="project-tech-stack">
+                        Tech Stack: HTML, SCSS
+                    </p>
+                </section>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer id="page-footer" class="projects-page-footer">
+            <small id="page-footer-copyright">&copy; 2020 Dan Levy</small>
+        </footer>
     </body>
 </html>

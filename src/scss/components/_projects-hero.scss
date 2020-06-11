@@ -1,0 +1,52 @@
+// =============================
+// Description: Project page hero component styles
+// Author: Dan Levy
+// Email: danlevy124@gmail.com
+// =============================
+
+#projects-hero {
+    position: relative;
+
+    @include flex($justify-content: center, $align-items: center);
+
+    height: 150px;
+
+    @include media-query($breakpoint: $tablet-breakpoint) {
+        height: 200px;
+    }
+
+    @include media-query($breakpoint: $desktop-breakpoint) {
+        height: 250px;
+    }
+
+    &-img {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        display: block;
+
+        height: 100%;
+
+        margin: auto;
+
+        opacity: 0.1;
+
+        // Places the image behind the title
+        z-index: -1;
+    }
+
+    &-title {
+        @include text(
+            $font-size: 1.5625rem,
+            $font-weight: 500,
+            $color: $primary-color,
+            $line-height: null
+        );
+
+        @include media-query($breakpoint: $tablet-breakpoint) {
+            font-size: 1.875rem;
+        }
+    }
+}

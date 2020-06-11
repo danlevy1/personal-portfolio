@@ -10,25 +10,11 @@
     // Extra row at the bottom set to 1fr in order to fill extra space (in case the header background height is greater than the header height)
     @include grid(
         $grid-template-rows: auto auto auto 1fr,
-        $grid-template-columns: 1fr 1fr 1fr,
+        $grid-template-columns: 1fr 1.5fr 1fr,
         $align-items: center
     );
-    grid-template-areas:
-        "hamburger-button name ."
-        "social-links social-links social-links"
-        "title title title"
-        ". . .";
-
-    height: $header-height;
 
     padding-top: 10px;
-
-    @include media-query($breakpoint: $tablet-breakpoint) {
-        grid-template-columns: 1fr 1.5fr 1fr;
-        grid-template-areas:
-            "name main-nav social-links"
-            "title title title";
-    }
 
     &-bg {
         position: absolute;
@@ -36,20 +22,11 @@
         left: 0;
 
         width: 100%;
-        height: $header-height;
 
         background-color: $primary-color;
 
-        clip-path: polygon(0 0, 100% 0, 100% 185px, 0 150px);
-
         // Puts the background behind the actual header
         z-index: -1;
-
-        @include media-query($breakpoint: $tablet-breakpoint) {
-            height: 110px;
-
-            clip-path: polygon(0 0, 100% 0, 100% 110px, 0 75px);
-        }
     }
 
     &-name {
@@ -101,6 +78,64 @@
             color: $primary-color;
 
             margin-top: 60px;
+        }
+    }
+}
+
+.home-page-header {
+    grid-template-areas:
+        "hamburger-button name ."
+        "social-links social-links social-links"
+        "title title title"
+        ". . .";
+
+    height: 185px;
+
+    @include media-query($breakpoint: $tablet-breakpoint) {
+        height: initial;
+
+        grid-template-areas:
+            "name main-nav social-links"
+            "title title title";
+    }
+
+    &-bg {
+        height: 185px;
+
+        clip-path: polygon(0 0, 100% 0, 100% 185px, 0 150px);
+
+        @include media-query($breakpoint: $tablet-breakpoint) {
+            height: 110px;
+
+            clip-path: polygon(0 0, 100% 0, 100% 110px, 0 75px);
+        }
+    }
+}
+
+.projects-page-header {
+    grid-template-areas:
+        "hamburger-button name ."
+        "social-links social-links social-links"
+        ". . .";
+
+    height: 130px;
+
+    @include media-query($breakpoint: $tablet-breakpoint) {
+        grid-template-columns: 1fr 1.5fr 1fr;
+        grid-template-areas: "name main-nav social-links";
+
+        height: 110px;
+    }
+
+    &-bg {
+        height: 130px;
+
+        clip-path: polygon(0 0, 100% 0, 100% 130px, 0 100px);
+
+        @include media-query($breakpoint: $tablet-breakpoint) {
+            height: 110px;
+
+            clip-path: polygon(0 0, 100% 0, 100% 110px, 0 75px);
         }
     }
 }

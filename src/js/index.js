@@ -9,6 +9,10 @@ import "../assets/icons/email-icon.svg";
 
 // Image imports
 import "../assets/images/about-me.png";
+import "../assets/images/projects-hero.png";
+import "../assets/images/tma-screenshot.png";
+import "../assets/images/web-app-dashboard-screenshot.png";
+import "../assets/images/web-style-guide-screenshot.png";
 
 // Logo imports
 import "../assets/logos/github-logo.svg";

@@ -1,0 +1,145 @@
+// =============================
+// Description: Project component styles
+// Author: Dan Levy
+// Email: danlevy124@gmail.com
+// =============================
+
+.project {
+    padding: 20px 10px;
+
+    text-align: center;
+
+    &-name {
+        position: relative;
+        display: inline-block;
+
+        @include text(
+            $font-size: 1.5625rem,
+            $font-weight: 400,
+            $color: $white-color,
+            $line-height: null
+        );
+
+        margin: 0;
+
+        &::after {
+            content: "";
+
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+
+            width: 30px;
+            height: 2px;
+
+            background-color: $white-color;
+        }
+    }
+
+    &-type {
+        @include text(
+            $font-size: 1.25rem,
+            $font-weight: 300,
+            $color: $white-color,
+            $line-height: null
+        );
+
+        margin-top: 10px;
+    }
+
+    &-links {
+        @include flex($justify-content: space-between, $align-items: center);
+
+        margin-top: 20px;
+    }
+
+    &-link {
+        @include text(
+            $font-size: 1.125rem,
+            $font-weight: 400,
+            $color: null,
+            $line-height: null
+        );
+
+        padding: 6px 12px;
+
+        background-color: $white-color;
+
+        border-radius: 10px;
+
+        box-shadow: $primary-box-shadow;
+    }
+
+    &-screenshot {
+        width: 100%;
+
+        margin-top: 30px;
+
+        box-shadow: $primary-box-shadow;
+
+        border-radius: 3px;
+    }
+
+    &-description {
+        position: relative;
+
+        @include text(
+            $font-size: 1rem,
+            $font-weight: 300,
+            $color: $white-color,
+            $line-height: 1.25rem
+        );
+        text-align: justify;
+
+        margin-top: 20px;
+
+        &::after {
+            content: "";
+
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+
+            width: 100px;
+            height: 2px;
+
+            background-color: $white-color;
+        }
+    }
+
+    &-tech-stack {
+        @include text(
+            $font-size: 1rem,
+            $font-weight: 300,
+            $color: $white-color,
+            $line-height: 1.25rem
+        );
+        text-align: justify;
+
+        margin-top: 22px;
+    }
+}
+
+#tma-project {
+    background-color: $tma-color;
+
+    &-link {
+        color: $tma-color;
+    }
+}
+
+#web-app-dashboard-project {
+    background-color: $web-app-dashboard-color;
+
+    &-link {
+        color: $web-app-dashboard-color;
+    }
+}
+
+#web-style-guide-project {
+    background-color: $web-style-guide-color;
+
+    &-link {
+        color: $web-style-guide-color;
+    }
+}
