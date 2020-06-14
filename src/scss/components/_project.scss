@@ -5,9 +5,29 @@
 // =============================
 
 .project {
+    text-align: center;
+
     padding: 20px 10px;
 
-    text-align: center;
+    @include media-query($breakpoint: $tablet-breakpoint) {
+        padding: 20px;
+    }
+
+    &-content {
+        max-width: 1000px;
+
+        margin: auto;
+    }
+
+    &-header {
+        @include flex($justify-content: center, $align-items: center);
+        flex-direction: column;
+
+        @include media-query($breakpoint: $desktop-breakpoint) {
+            justify-content: space-between;
+            flex-direction: row;
+        }
+    }
 
     &-name {
         position: relative;
@@ -34,6 +54,10 @@
 
             background-color: $white-color;
         }
+
+        @include media-query($breakpoint: $tablet-breakpoint) {
+            display: inline;
+        }
     }
 
     &-type {
@@ -45,32 +69,57 @@
         );
 
         margin-top: 10px;
+
+        @include media-query($breakpoint: $tablet-breakpoint) {
+            display: inline;
+
+            font-size: 1.5625rem;
+
+            margin-top: 0;
+
+            &::before {
+                content: "•";
+                margin: auto 10px auto 7px;
+            }
+        }
     }
 
     &-links {
         @include flex($justify-content: center, $align-items: center);
 
         margin-top: 20px;
+
+        @include media-query($breakpoint: $desktop-breakpoint) {
+            margin-top: 0;
+        }
     }
 
     &-link {
         @include text(
             $font-size: 1.125rem,
             $font-weight: 400,
-            $color: null,
+            $color: $white-color,
             $line-height: null
         );
 
         padding: 6px 12px;
 
-        background-color: $white-color;
-
         border-radius: 10px;
 
         box-shadow: $primary-box-shadow;
 
+        transition: all 0.2s ease-in-out;
+
         &:first-child {
             margin-right: 60px;
+
+            @include media-query($breakpoint: $tablet-breakpoint) {
+                margin-right: 80px;
+            }
+        }
+
+        @include media-query($breakpoint: $tablet-breakpoint) {
+            font-size: 1.25rem;
         }
     }
 
@@ -101,13 +150,22 @@
             content: "";
 
             position: absolute;
-            bottom: -10px;
+            bottom: -12px;
             left: 0;
 
             width: 100px;
             height: 2px;
 
             background-color: $white-color;
+
+            @include media-query($breakpoint: $tablet-breakpoint) {
+                bottom: -13px;
+            }
+        }
+
+        @include media-query($breakpoint: $tablet-breakpoint) {
+            font-size: 1.125rem;
+            line-height: 1.25rem;
         }
     }
 
@@ -121,29 +179,57 @@
         text-align: justify;
 
         margin-top: 22px;
+
+        @include media-query($breakpoint: $tablet-breakpoint) {
+            font-size: 1.125rem;
+            line-height: 1.25rem;
+        }
     }
 }
 
 #tma-project {
-    background-color: $tma-color;
+    background-color: rgba($tma-primary-color, 0.8);
 
     &-link {
-        color: $tma-color;
+        background-color: $tma-secondary-color;
+
+        @include media-query($breakpoint: $desktop-breakpoint) {
+            &:hover {
+                color: $tma-secondary-color;
+
+                background-color: $white-color;
+            }
+        }
     }
 }
 
 #web-app-dashboard-project {
-    background-color: $web-app-dashboard-color;
+    background-color: rgba($web-app-dashboard-primary-color, 0.8);
 
     &-link {
-        color: $web-app-dashboard-color;
+        background-color: $web-app-dashboard-secondary-color;
+
+        @include media-query($breakpoint: $desktop-breakpoint) {
+            &:hover {
+                color: $web-app-dashboard-secondary-color;
+
+                background-color: $white-color;
+            }
+        }
     }
 }
 
 #web-style-guide-project {
-    background-color: $web-style-guide-color;
+    background-color: rgba($web-style-guide-primary-color, 0.8);
 
     &-link {
-        color: $web-style-guide-color;
+        background-color: $web-style-guide-secondary-color;
+
+        @include media-query($breakpoint: $desktop-breakpoint) {
+            &:hover {
+                color: $web-style-guide-secondary-color;
+                background-color: $white-color;
+            }
+        }
     }
 }
