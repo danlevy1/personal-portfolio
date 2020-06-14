@@ -48,7 +48,7 @@
     }
 
     &-links {
-        @include flex($justify-content: space-between, $align-items: center);
+        @include flex($justify-content: center, $align-items: center);
 
         margin-top: 20px;
     }
@@ -68,6 +68,10 @@
         border-radius: 10px;
 
         box-shadow: $primary-box-shadow;
+
+        &:first-child {
+            margin-right: 60px;
+        }
     }
 
     &-screenshot {
