@@ -1,4 +1,25 @@
 const path = require("path");
+const { exec } = require("child_process");
+
+// Logs the dev server address
+exec("ipconfig getifaddr en0", (error, stdout, stderr) => {
+    console.log("------------------------------------------");
+    if (error) {
+        console.log("------------------------------------------");
+        console.log(
+            `Error executing shell command "ipconfig getifaddr en0". Error: ${error}`
+        );
+        console.log(`Dev server available at "localhost:3000"`);
+    } else if (stderr) {
+        console.log(
+            `Error executing shell command "ipconfig getifaddr en0". Error: ${stderr}`
+        );
+        console.log(`Dev server available at "localhost:3000"`);
+    } else {
+        console.log(`Dev server available at ${stdout.trim()}:3000`);
+    }
+    console.log("------------------------------------------");
+});
 
 module.exports = () => ({
     output: {
