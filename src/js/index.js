@@ -1,5 +1,5 @@
 // JS imports
-import "firebase";
+import "./firebase";
 import "../js/header";
 
 // File imports

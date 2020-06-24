@@ -1,8 +1,20 @@
 const path = require("path");
 const webpackMerge = require("webpack-merge");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const dotenv = require("dotenv");
+const { DefinePlugin } = require("webpack");
 
+// Gets the correct config file for dev or prod
 const modeConfig = (env) => require(`./build-utils/webpack.${env}`)(env);
+
+// Gets the environment variables from the .env file
+const env = dotenv.config().parsed;
+
+// Converts the environment variables into readable JS variables
+const envKeys = Object.keys(env).reduce((acc, key) => {
+    acc[`process.env.${key}`] = JSON.stringify(env[key]);
+    return acc;
+}, {});
 
 module.exports = ({ mode }) => {
     return webpackMerge(
@@ -66,6 +78,7 @@ module.exports = ({ mode }) => {
                     filename: "projects.html",
                     template: "./src/projects.html",
                 }),
+                new DefinePlugin(envKeys),
             ],
         },
         modeConfig(mode)
